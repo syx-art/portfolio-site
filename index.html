@@ -1,0 +1,659 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鐭虫槗閼?路 鐜鑹烘湳璁捐 路 PORTFOLIO 2026</title>
+<link href="https://fonts.loli.net/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f5;
+    --text: #1a1817;
+    --text-muted: #8a8580;
+    --accent: #b8956a;
+    --accent-dim: #d4c4aa;
+    --rule: #e0dbd4;
+    --surface: #f3f0eb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: clamp(15px, 1.6vw, 17px);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, .serif {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: clamp(60px, 10vw, 120px) 0;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(184,149,106,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(184,149,106,0.05) 0%, transparent 50%);
+  }
+  .hero-num {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(100px, 16vw, 240px); line-height: 0.85;
+    color: transparent; -webkit-text-stroke: 1px var(--rule);
+    opacity: 0.5; margin-bottom: -0.1em; user-select: none;
+  }
+  .hero-name { font-size: clamp(38px, 6vw, 72px); line-height: 1.05; }
+  .hero-sub { font-size: clamp(14px, 1.8vw, 18px); color: var(--text-muted); font-weight: 300; letter-spacing: 0.06em; text-transform: uppercase; margin: 8px 0 clamp(36px, 5vw, 52px); }
+  .hero-meta { display: flex; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap; font-size: 13px; color: var(--text-muted); }
+  .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  .hero-meta span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+  /* SECTION HEADER */
+  .sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: end; padding: clamp(90px, 12vw, 160px) 0 clamp(36px, 4vw, 60px); }
+  .sec-num {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(50px, 9vw, 120px); line-height: 0.9;
+    color: transparent; -webkit-text-stroke: 1px var(--rule); opacity: 0.35;
+  }
+  .sec-title { font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1; }
+
+  /* CAPABILITIES */
+  .caps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; padding-bottom: clamp(90px, 12vw, 160px); }
+  .cap { background: var(--surface); padding: clamp(28px, 3.5vw, 44px) clamp(18px, 2.5vw, 32px); transition: background .3s; }
+  .cap:hover { background: #eeebe4; }
+  .cap span { font-size: 12px; color: var(--accent); letter-spacing: 0.1em; font-weight: 500; }
+  .cap h4 { font-size: clamp(17px, 2vw, 22px); margin: 8px 0 6px; }
+  .cap p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+  /* DIVIDER */
+  .hr { height: 1px; background: var(--rule); margin: clamp(80px, 10vw, 140px) 0; }
+
+  /* PROJECT */
+  .proj-header { display: grid; grid-template-columns: 200px 1fr; gap: clamp(28px, 4vw, 52px); align-items: start; padding-top: clamp(60px, 8vw, 100px); }
+  .proj-meta { padding-left: 20px; position: relative; }
+  .proj-meta::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: var(--accent); }
+  .proj-cat { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); font-weight: 500; margin-bottom: 12px; }
+  .proj-title { font-size: clamp(28px, 4.2vw, 48px); line-height: 1.05; margin-bottom: 8px; }
+  .proj-sub { font-size: clamp(13px, 1.5vw, 16px); color: var(--text-muted); font-weight: 300; margin-bottom: 24px; }
+  .proj-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; max-width: 480px; }
+  .proj-imgs { padding: clamp(28px, 4vw, 48px) 0; }
+  .proj-imgs img { width: 100%; margin-bottom: clamp(12px, 1.8vw, 20px); background: var(--surface); transition: transform .4s; }
+  .proj-imgs img:hover { transform: scale(1.008); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 1.5vw, 16px); margin-bottom: clamp(12px, 1.8vw, 20px); }
+  .pair img { margin-bottom: 0; }
+
+  /* SUB-PROJECT */
+  .sub-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(20px, 3vw, 32px);
+    margin: clamp(40px, 6vw, 72px) 0 clamp(20px, 3vw, 32px);
+    padding-left: 16px;
+    border-left: 2px solid var(--accent);
+    color: var(--text);
+    opacity: 0.85;
+  }
+
+  /* SOFTWARE */
+  .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; padding-bottom: clamp(90px, 12vw, 160px); }
+  .sk { background: var(--surface); padding: clamp(24px, 3vw, 36px) clamp(18px, 2vw, 28px); }
+  .sk h4 { font-size: clamp(14px, 1.6vw, 17px); color: var(--accent); margin-bottom: 12px; letter-spacing: 0.04em; }
+  .sk p { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+  /* AWARDS */
+  .awards { padding-bottom: clamp(60px, 8vw, 90px); }
+  .aw { display: grid; grid-template-columns: 70px 1fr 160px; gap: 20px; align-items: center; padding: clamp(18px, 2.5vw, 28px) clamp(16px, 2.5vw, 28px); background: var(--surface); margin-bottom: 1px; }
+  .aw-y { font-family: 'DM Serif Display', Georgia, serif; font-size: 18px; color: var(--accent); }
+  .aw-n { font-size: clamp(14px, 1.6vw, 17px); font-weight: 500; }
+  .aw-p { text-align: right; font-size: 12px; color: var(--text-muted); }
+
+  /* FOOTER */
+  .footer { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 64px); padding: clamp(60px, 10vw, 120px) 0 clamp(32px, 4vw, 48px); border-top: 1px solid var(--rule); }
+  .footer h2 { font-size: clamp(26px, 3.5vw, 38px); }
+  .footer p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+  .footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+  .footer a:hover { border-color: var(--accent); }
+
+  /* REVEAL */
+  .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+  .rv.sh { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    .sec-head, .proj-header { grid-template-columns: 1fr; }
+    .caps { grid-template-columns: 1fr 1fr; }
+    .skills { grid-template-columns: 1fr 1fr; }
+    .aw { grid-template-columns: 1fr; gap: 4px; }
+    .aw-p { text-align: left; }
+    .pair { grid-template-columns: 1fr; }
+    .footer { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 500px) {
+    .caps { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <section class="hero rv">
+    <div class="hero-num">2026</div>
+    <h1 class="hero-name">鐭虫槗閼?/h1>
+    <p class="hero-sub">鐜鑹烘湳璁捐 路 浣滃搧闆?/p>
+    <div class="hero-meta">
+      <span>婀樿タ</span>
+      <span>鏁堟灉鍥捐〃鐜?/ 鏅璁捐 / 瀹ゅ唴璁捐</span>
+      <span>2149314571@qq.com</span>
+    </div>
+  </section>
+
+  <section class="sec-head rv"><div class="sec-num">CAPABILITIES</div><h2 class="sec-title">鏍稿績鑳藉姏鎬昏</h2></section>
+  <section class="caps rv">
+    <div class="cap"><span>01</span><h4>瀹ゅ唴璁捐</h4><p>鍟嗕笟绌洪棿 路 閰掑簵鏀归€?路 浣忓畢鍏ㄦ</p></div>
+    <div class="cap"><span>02</span><h4>閰掑簵璁捐</h4><p>宸ヤ笟閬楀潃鏀归€?路 绌洪棿鍙欎簨浣撻獙</p></div>
+    <div class="cap"><span>03</span><h4>姘戝璁捐</h4><p>鍦板煙鏂囧寲鎻愬彇 路 娌夋蹈寮忔梾灞呯┖闂?/p></div>
+    <div class="cap"><span>04</span><h4>鏅璁捐</h4><p>鍩庡競骞垮満 路 鐢熸€佷紭鍏堣璁?/p></div>
+    <div class="cap"><span>05</span><h4>鏁堟灉鍥捐〃鐜?/h4><p>3ds Max + Corona 鍐欏疄娓叉煋</p></div>
+    <div class="cap"><span>06</span><h4>AI 杈呭姪璁捐</h4><p>AI寤烘ā杈呭姪 路 鏅鸿兘娓叉煋浼樺寲</p></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<!-- ===== 鏉垮潡涓€锛氬晢涓氱┖闂磋璁?===== -->
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">01</div><h2 class="sec-title">鍟嗕笟绌洪棿璁捐</h2></section>
+
+  <!-- 閾濆巶鏀归€犻厭搴?-->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">閰掑簵鏀归€?路 瀹ゅ唴璁捐</div></div>
+      <div>
+        <h3 class="proj-title">鎬€鍖栭摑鍘傞厭搴楁敼閫?/h3>
+        <p class="proj-sub">姣曚笟璁捐 路 宸ヤ笟閬楀潃鏀归€?/p>
+        <p class="proj-desc">鎬€鍖栭摑鍘傚伐涓氶仐鍧€鏀归€犱负绮惧搧閰掑簵鏂规銆備繚鐣欏師鏈夐挗缁撴瀯涓庣爾澧欒倢鐞嗭紝浠ョ幇浠ｈ璁¤瑷€閲嶆瀯绌洪棿鍙欎簨銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs">
+      <img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?1.webp" loading="lazy">
+      <div class="pair"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?111.webp" loading="lazy"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?1_4..webp" loading="lazy"></div>
+      <img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?3.webp" loading="lazy">
+      <div class="pair"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?4.webp" loading="lazy"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?5.webp" loading="lazy"></div>
+      <img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?6.webp" loading="lazy">
+      <div class="pair"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?7.webp" loading="lazy"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?s4000.webp" loading="lazy"></div>
+      <img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?鍘傛埧鏀归€犲害鍋囬厭搴楄璁￠」鐩?png" loading="lazy">
+      <div class="pair"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?鏍囧噯瀹㈡埧.webp" loading="lazy"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?缁堢2.webp" loading="lazy"></div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 鑻楅煹灞曢 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">鍟嗕笟绌洪棿 路 瀹ゅ唴璁捐</div></div>
+      <div>
+        <h3 class="proj-title">鑻楅煹灞曢</h3>
+        <p class="proj-sub">姘戞棌鏂囧寲灞曢 路 鍟嗕笟绌洪棿</p>
+        <p class="proj-desc">鑻楁棌鏂囧寲涓婚灞曢瀹ゅ唴璁捐銆傚皢浼犵粺绾规牱銆佽壊褰╀綋绯讳笌绌洪棿缁撴瀯杩涜鐜颁唬琛ㄨ揪锛屼互褰撲唬璁捐璇█杞瘧姘戞棌鏂囧寲绗﹀彿銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="miaoyun-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 涔﹀北骞垮満鏀归€?-->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">鏅 路 鍩庡競骞垮満</div></div>
+      <div>
+        <h3 class="proj-title">涔﹀北骞垮満鏀归€?/h3>
+        <p class="proj-sub">鍩庡競鍏叡绌洪棿 路 鏂囧寲骞垮満</p>
+        <p class="proj-desc">浠?涔﹀北鏈夎矾"涓烘蹇电殑鍩庡競骞垮満鏀归€狅紝灏嗛槄璇绘枃鍖栦笌鍏叡绌洪棿铻嶅悎锛屾墦閫犲競姘戞枃鍖栦紤闂叉柊鍦版爣銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="shushan-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 鍜栧暋鍘?-->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">鍟嗕笟绌洪棿 路 瀹ゅ唴璁捐</div></div>
+      <div>
+        <h3 class="proj-title">鍜栧暋鍘呰璁?/h3>
+        <p class="proj-sub">鍟嗕笟椁愰ギ绌洪棿</p>
+        <p class="proj-desc">浠ュ綋浠ｇ畝绾︾編瀛︽墦閫犵簿鍝佸挅鍟＄┖闂达紝閫氳繃鏉愯川瀵规瘮涓庡厜褰辫璁¤惀閫犺垝閫傝€屾湁鏍艰皟鐨勭ぞ浜ゅ満鎵€銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="cafe-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 瀛︽牎澶ч棬鏀归€?-->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">寤虹瓚璁捐 路 澶栫珛闈?/div></div>
+      <div>
+        <h3 class="proj-title">瀛︽牎澶ч棬鏀归€?/h3>
+        <p class="proj-sub">鏁欒偛寤虹瓚 路 鍏ュ彛绌洪棿</p>
+        <p class="proj-desc">浠ョ幇浠ｇ畝娲佺殑璁捐璇█閲嶅鏍″洯鍏ュ彛褰㈣薄锛屽吋椤炬爣蹇楁€т笌鍔熻兘鎬э紝鎵撻€犲紑鏀惧寘瀹圭殑鏍″洯绗竴鍗拌薄銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="school-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 鎴峰浜插瓙鍏洯 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">鏅璁捐 路 浜插瓙绌洪棿</div></div>
+      <div>
+        <h3 class="proj-title">鎴峰浜插瓙鍏洯</h3>
+        <p class="proj-sub">浜插瓙娓镐箰 路 鑷劧鎺㈢储</p>
+        <p class="proj-desc">浠ュ効绔ュ弸濂戒负鏍稿績璁捐鐞嗗康锛岃瀺鍚堣嚜鐒舵暀鑲蹭笌娓镐箰浣撻獙锛屾墦閫犲畨鍏ㄣ€佽叮鍛炽€佹湁鏁欒偛鎰忎箟鐨勪翰瀛愭埛澶栫┖闂淬€?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="park-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 鏅鍏洯 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">鏅璁捐</div></div>
+      <div>
+        <h3 class="proj-title">鏅鍏洯</h3>
+        <p class="proj-sub">鍩庡競鍏洯 路 鐢熸€佹櫙瑙?/p>
+        <p class="proj-desc">浠ョ敓鎬佷紭鍏堜负鍘熷垯锛屽钩琛″姛鑳介渶姹備笌缇庡琛ㄨ揪锛屽垱閫犱汉涓庤嚜鐒跺拰璋愬叡鐢熺殑鍩庡競缁挎床銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="landscape-imgs"></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<!-- ===== 鏉垮潡浜岋細瀹跺眳璁捐 ===== -->
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">02</div><h2 class="sec-title">瀹跺眳璁捐</h2></section>
+
+  <!-- 鍘熸湪椋庡灞?-->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">浣忓畢 路 瀹ゅ唴璁捐</div></div>
+      <div>
+        <h3 class="proj-title">鍘熸湪椋庡灞呰璁?/h3>
+        <p class="proj-sub">鑷劧鑲岀悊 路 娓╂殩瑙︽劅</p>
+        <p class="proj-desc">浠ュ師鏈ㄤ负鏍稿績鏉愯川锛屽己璋冭嚜鐒惰倢鐞嗕笌娓╂殩瑙︽劅锛屾墦閫犲洖褰掓湰鐪熺殑灞呬綇绌洪棿銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="wood-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 瀹嬫皬缇庡瀹跺眳 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">浣忓畢 路 涓滄柟缇庡</div></div>
+      <div>
+        <h3 class="proj-title">瀹嬫皬缇庡瀹跺眳璁捐</h3>
+        <p class="proj-sub">鐣欑櫧 路 鍏嬪埗 路 闆呰嚧</p>
+        <p class="proj-desc">浠ュ畫浠ｇ編瀛︿负搴曡壊锛屼互鐣欑櫧涓庡厠鍒舵紨缁庨泤鑷寸敓娲伙紝杩芥眰绌洪棿鐨勭簿绁炴€т笌浠紡鎰熴€?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="song-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 姘戝璁捐 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">姘戝 路 瀹ゅ唴璁捐</div></div>
+      <div>
+        <h3 class="proj-title">姘戝璁捐</h3>
+        <p class="proj-sub">鍦板煙鏂囧寲涓庣幇浠ｆ梾灞?/p>
+        <p class="proj-desc">鎻愬彇鍦ㄥ湴鏂囧寲绗﹀彿涓庤嚜鐒舵潗璐紝閫氳繃鍏夊奖銆佹潗鏂欎笌绌洪棿鑺傚钀ラ€犳矇娴稿紡鏃呭眳浣撻獙銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="minsu-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 绠€绾﹀灞?-->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">浣忓畢 路 鐜颁唬绠€绾?/div></div>
+      <div>
+        <h3 class="proj-title">绠€绾﹀灞呰璁?/h3>
+        <p class="proj-sub">鍔熻兘 路 褰㈠紡 路 鏋佽嚧骞宠　</p>
+        <p class="proj-desc">杩芥眰鍔熻兘涓庡舰寮忕殑鏋佽嚧骞宠　锛屼互绠€娲佺嚎鏉″拰鍏嬪埗閰嶈壊婕旂粠褰撲唬閮藉競鐢熸椿缇庡銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="simple-imgs"></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<!-- ===== 鏉垮潡涓夛細椤圭洰钀藉湴 ===== -->
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">03</div><h2 class="sec-title">椤圭洰钀藉湴</h2></section>
+
+  <!-- 浜戝崡鍙彛鍙箰鍗氱墿棣?-->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">鍝佺墝绌洪棿 路 鍗氱墿棣?/div></div>
+      <div>
+        <h3 class="proj-title">浜戝崡鍙彛鍙箰鍗氱墿棣?/h3>
+        <p class="proj-sub">鍝佺墝鏂囧寲灞曠ず绌洪棿 路 40W鐙珛瀹屾垚</p>
+        <p class="proj-desc">鍙彛鍙箰鍝佺墝鏂囧寲灞曠ず绌洪棿鍏ㄦ璁捐銆備粠姒傚康鍒拌惤鍦板畬鏁存妸鎺э紝灏嗗搧鐗岀櫨骞村巻鍙蹭笌浜戝崡鍦板煙鏂囧寲铻嶅悎銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="museum-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 鍘﹂棬鍙彛鍙箰鍔炲叕妤?-->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">鍔炲叕绌洪棿 路 瀹ゅ唴璁捐</div></div>
+      <div>
+        <h3 class="proj-title">鍘﹂棬鍙彛鍙箰鍔炲叕妤?/h3>
+        <p class="proj-sub">浼佷笟鍔炲叕绌洪棿璁捐</p>
+        <p class="proj-desc">浠ュ搧鐗屾椿鍔涗负鏍稿績锛屾墦閫犲吋鍏蜂笓涓氭€т笌鍒涙剰姘涘洿鐨勭幇浠ｄ紒涓氬姙鍏┖闂达紝婵€鍙戝洟闃熷崗浣滀笌鍒涙柊銆?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="office-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 婀涙睙鍙彛鍙箰楗爞 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">椁愰ギ绌洪棿 路 瀹ゅ唴璁捐</div></div>
+      <div>
+        <h3 class="proj-title">婀涙睙鍙彛鍙箰楗爞鏀归€?/h3>
+        <p class="proj-sub">浼佷笟椋熷爞缈绘柊鏀归€?/p>
+        <p class="proj-desc">浠ユ槑浜€侀珮鏁堛€佽垝閫備负璁捐瀵煎悜锛岄噸濉戜紒涓氶鍫傜殑绌洪棿浣撻獙锛屾彁鍗囧憳宸ョ敤椁愬搧璐ㄤ笌骞哥鎰熴€?/p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="canteen-imgs"></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">TOOLS</div><h2 class="sec-title">杞欢鑳藉姏</h2></section>
+  <section class="skills rv">
+    <div class="sk"><h4>寤烘ā涓庢覆鏌?/h4><p>3ds Max<br>Corona Renderer<br>VRay</p></div>
+    <div class="sk"><h4>鍚庢湡涓庤〃鐜?/h4><p>Photoshop<br>CAD 鏂藉伐鍥?br>VR 鎶€鏈?/p></div>
+    <div class="sk"><h4>鏂规涓庡崗浣?/h4><p>涓绘璁捐<br>鏅璁捐<br>鍔ㄧ敾娓叉煋</p></div>
+    <div class="sk"><h4>鍓嶆部鎺㈢储</h4><p>AI 杈呭姪寤烘ā<br>鏅鸿兘娓叉煋浼樺寲<br>鍙傛暟鍖栬璁?/p></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">HONORS</div><h2 class="sec-title">鑾峰缁忓巻</h2></section>
+  <section class="awards rv">
+    <div class="aw"><div class="aw-y">2023</div><div class="aw-n">"妤氭€℃澂"婀栧崡鐪佹妧鑳藉ぇ璧?/div><div class="aw-p">涓€绛夊</div></div>
+    <div class="aw"><div class="aw-y">2022</div><div class="aw-n">涓€甯︿竴璺毃閲戠爾鍥藉鎶€鑳藉ぇ璧?/div><div class="aw-p">涓€绛夊</div></div>
+    <div class="aw"><div class="aw-y">2022</div><div class="aw-n">"妤氭€℃澂"婀栧崡鐪佹妧鑳藉ぇ璧?/div><div class="aw-p">涓€绛夊 路 鑾烽潰璇曚笓鍗囨湰璧勬牸</div></div>
+    <div class="aw"><div class="aw-y">2021</div><div class="aw-n">"CCVR"涓浗铏氭嫙鐜板疄澶ц禌</div><div class="aw-p">浜岀瓑濂?/div></div>
+  </section>
+</div>
+
+<div class="container">
+  <footer class="footer rv">
+    <div><h2>鐭虫槗閼?/h2><p style="margin-top:6px">鐜鑹烘湳璁捐 路 PORTFOLIO 2026</p></div>
+    <div><p>婀樿タ</p><p><a href="mailto:2149314571@qq.com">2149314571@qq.com</a></p><p>13467406613</p><p style="margin-top:10px;font-size:12px">3ds Max 路 Corona 路 Photoshop</p></div>
+  </footer>
+</div>
+
+<script>
+// Dynamically load images from WebP directory structure
+const imgGroups = {
+  'miaoyun-imgs': {
+    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?鑻楅煹灞曢',
+    files: null // will be glob-matched via the list below
+  },
+  'shushan-imgs': {
+    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?涔﹀北骞垮満鏀归€?,
+    files: null
+  },
+  'cafe-imgs': {
+    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?鍜栧暋鍘?,
+    files: null
+  },
+  'school-imgs': {
+    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?瀛︽牎澶ч棬鏀归€?,
+    files: null
+  },
+  'park-imgs': {
+    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?鎴峰浜插瓙鍏洯',
+    files: null
+  },
+  'landscape-imgs': {
+    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?鏅鍏洯',
+    files: null
+  },
+  'wood-imgs': {
+    base: 'WebP/瀹跺眳璁捐/鏁堟灉鍥剧簿閫?鍘熸湪椋庡灞呰璁?,
+    files: null
+  },
+  'song-imgs': {
+    base: 'WebP/瀹跺眳璁捐/鏁堟灉鍥剧簿閫?瀹嬫皬缇庡瀹跺眳璁捐',
+    files: null
+  },
+  'minsu-imgs': {
+    base: 'WebP/瀹跺眳璁捐/鏁堟灉鍥剧簿閫?姘戝璁捐',
+    files: null
+  },
+  'simple-imgs': {
+    base: 'WebP/瀹跺眳璁捐/鏁堟灉鍥剧簿閫?绠€绾﹀灞呰璁?,
+    files: null
+  },
+  'museum-imgs': {
+    base: 'WebP/椤圭洰钀藉湴/鏁堟灉鍥剧簿閫?浜戝崡鍙彛鍙箰鍗氱墿棣?,
+    files: null
+  },
+  'office-imgs': {
+    base: 'WebP/椤圭洰钀藉湴/鏁堟灉鍥剧簿閫?鍘﹂棬鍙彛鍙箰鍏徃鍔炲叕妤艰璁?,
+    files: null
+  },
+  'canteen-imgs': {
+    base: 'WebP/椤圭洰钀藉湴/鏁堟灉鍥剧簿閫?婀涙睙鍙彛鍙箰楗爞缈绘柊鏀归€?,
+    files: null
+  }
+};
+
+// File lists for each directory (pre-computed from the actual filesystem)
+const fileLists = {
+  'miaoyun-imgs': [
+    'jimeng-2026-05-29-1111-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-1676-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-3840-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-4022-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-5885-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-7480-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9268-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9331-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9511-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
+  ],
+  'shushan-imgs': [
+    'jimeng-2026-05-29-1361-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-3090-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-4097-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-5861-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-7814-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-8460-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9662-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9979-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
+  ],
+  'cafe-imgs': [
+    'jimeng-2026-05-29-3034-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-3441-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
+  ],
+  'school-imgs': [
+    'jimeng-2026-05-29-9779-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    '鏁堟灉鍥?webp'
+  ],
+  'park-imgs': [
+    'jimeng-2026-05-29-3595-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-3645-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-3984-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-5282-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-5867-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9147-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
+  ],
+  'landscape-imgs': [
+    'jimeng-2026-05-29-2123-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-7024-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9618-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
+  ],
+  'wood-imgs': [
+    'jimeng-2026-05-29-2738-灏嗙敓66cb323c-4597-4ea1-a29d-36fe394e38c5鎴愪竴....webp',
+    'jimeng-2026-05-29-5249-灏嗙敓42c74d3b-e3bd-4984-9586-f36efb9082b3鎴愪竴....webp',
+    'jimeng-2026-05-29-6281-灏嗙敓725ad8d6-1649-41b7-a9c8-badfe716c0c8鎴愪竴....webp',
+    'jimeng-2026-05-29-7224-灏嗙敓6ebdfdd4-d413-4ff6-bc3d-45ee71246bf3鎴愪竴....webp',
+    'jimeng-2026-05-29-8084-灏嗙敓瀹㈤鍘ㄤ竴浣?鍥?)鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛?...webp'
+  ],
+  'song-imgs': [
+    '涓紡灞忛.webp',
+    '浜虹墿鍦烘櫙.webp',
+    '鍏夊奖杩愮敤.webp',
+    '瀹㈤鍘呬竴浣?webp',
+    '寰窛鐗瑰啓.webp',
+    '鐗瑰啓闀滃ご.webp'
+  ],
+  'minsu-imgs': [
+    'jimeng-2026-05-29-1703-灏哸42c9369-a9d8-4324-a096-a7b21cb189e0鐢熸垚涓€....png',
+    'jimeng-2026-05-29-3935-灏嗗厜褰辫糠浜虹敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚....png',
+    'png/jimeng-2026-06-08-2340-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛岀粰鍦伴潰娣诲姞涓庣幆澧冪浉....png',
+    'png/jimeng-2026-06-08-3666-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛岀粰鍦伴潰娣诲姞涓庣幆澧冪浉....png',
+    'png/jimeng-2026-06-08-3914-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png',
+    'png/jimeng-2026-06-08-4282-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png',
+    'png/jimeng-2026-06-08-4387-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png',
+    'png/jimeng-2026-06-08-6361-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png',
+    'png/jimeng-2026-06-08-6588-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png'
+  ],
+  'simple-imgs': [
+    'jimeng-2026-05-29-1429-灏嗭紒鍥剧墖1鐢熸垚涓€寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚....webp',
+    'jimeng-2026-05-29-4857-灏嗗浘鐗?鐢熸垚涓€寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸?...webp',
+    'jimeng-2026-05-29-7087-灏嗗浘鐗?鐢熸垚涓€寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸?...webp'
+  ],
+  'museum-imgs': [
+    'jimeng-2026-05-29-1244-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-1877-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-4145-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-4616-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-4895-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-6896-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-8347-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9154-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9661-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
+  ],
+  'office-imgs': [
+    'jimeng-2026-05-29-1693-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-2686-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-3589-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-3875-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-4473-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-4634-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-5684-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9352-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9766-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
+  ],
+  'canteen-imgs': [
+    'jimeng-2026-05-29-6933-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-7186-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-7336-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-7471-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-7680-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-7841-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-8410-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
+    'jimeng-2026-05-29-9758-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
+  ]
+};
+
+// Render images for each group
+Object.entries(fileLists).forEach(([containerId, files]) => {
+  const container = document.getElementById(containerId);
+  if (!container || !files.length) return;
+  const base = imgGroups[containerId].base;
+  files.forEach((f, i) => {
+    const src = base + '/' + encodeURI(f);
+    if (i % 3 === 0 && i + 1 < files.length) {
+      // Full then pair
+      const full = document.createElement('img');
+      full.src = src;
+      full.loading = 'lazy';
+      container.appendChild(full);
+
+      const pair = document.createElement('div');
+      pair.className = 'pair';
+      const nextFile = files[i + 1];
+      if (nextFile) {
+        const img2 = document.createElement('img');
+        img2.src = base + '/' + encodeURI(nextFile);
+        img2.loading = 'lazy';
+        pair.appendChild(img2);
+      }
+      const thirdFile = files[i + 2];
+      if (thirdFile) {
+        const img3 = document.createElement('img');
+        img3.src = base + '/' + encodeURI(thirdFile);
+        img3.loading = 'lazy';
+        pair.appendChild(img3);
+      }
+      container.appendChild(pair);
+      // Skip the paired files in the main loop
+      files[i + 1] = null;
+      files[i + 2] = null;
+    } else if (files[i] !== null && (i === 0 || (i - 1) % 3 !== 0 || files[i - 1] === null)) {
+      // Already handled in pair above, but handle edge cases
+    }
+  });
+  // Fallback: simpler approach - just render sequentially with alternating layout
+  container.innerHTML = '';
+  const cleanFiles = files.filter(f => f !== null);
+  // Actually let me redo this cleaner
+  cleanFiles.forEach((f, i) => {
+    const src = base + '/' + encodeURI(f);
+    const img = document.createElement('img');
+    img.src = src;
+    img.loading = 'lazy';
+    container.appendChild(img);
+  });
+});
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('sh'); obs.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

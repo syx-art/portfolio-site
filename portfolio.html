@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>石易鑫 · 环境艺术设计 · PORTFOLIO 2026</title>
+<link href="https://fonts.loli.net/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f5;
+    --text: #1a1817;
+    --text-muted: #8a8580;
+    --accent: #b8956a;
+    --accent-dim: #d4c4aa;
+    --rule: #e0dbd4;
+    --surface: #f3f0eb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: clamp(15px, 1.6vw, 17px);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, .serif {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  .container { max-width: 1400px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding: clamp(60px, 10vw, 120px) 0;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 70% 30%, rgba(184,149,106,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(184,149,106,0.05) 0%, transparent 50%);
+  }
+  .hero-num {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(100px, 16vw, 240px); line-height: 0.85;
+    color: transparent; -webkit-text-stroke: 1px var(--rule);
+    opacity: 0.5; margin-bottom: -0.1em; user-select: none;
+  }
+  .hero-name { font-size: clamp(38px, 6vw, 72px); line-height: 1.05; }
+  .hero-sub { font-size: clamp(14px, 1.8vw, 18px); color: var(--text-muted); font-weight: 300; letter-spacing: 0.06em; text-transform: uppercase; margin: 8px 0 clamp(36px, 5vw, 52px); }
+  .hero-meta { display: flex; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap; font-size: 13px; color: var(--text-muted); }
+  .hero-meta span { display: flex; align-items: center; gap: 8px; }
+  .hero-meta span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+  /* SECTION HEADER */
+  .sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: end; padding: clamp(90px, 12vw, 160px) 0 clamp(36px, 4vw, 60px); }
+  .sec-num {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(50px, 9vw, 120px); line-height: 0.9;
+    color: transparent; -webkit-text-stroke: 1px var(--rule); opacity: 0.35;
+  }
+  .sec-title { font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1; }
+
+  /* CAPABILITIES */
+  .caps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; padding-bottom: clamp(90px, 12vw, 160px); }
+  .cap { background: var(--surface); padding: clamp(28px, 3.5vw, 44px) clamp(18px, 2.5vw, 32px); transition: background .3s; }
+  .cap:hover { background: #eeebe4; }
+  .cap span { font-size: 12px; color: var(--accent); letter-spacing: 0.1em; font-weight: 500; }
+  .cap h4 { font-size: clamp(17px, 2vw, 22px); margin: 8px 0 6px; }
+  .cap p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+  /* DIVIDER */
+  .hr { height: 1px; background: var(--rule); margin: clamp(80px, 10vw, 140px) 0; }
+
+  /* PROJECT */
+  .proj-header { display: grid; grid-template-columns: 200px 1fr; gap: clamp(28px, 4vw, 52px); align-items: start; padding-top: clamp(60px, 8vw, 100px); }
+  .proj-meta { padding-left: 20px; position: relative; }
+  .proj-meta::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: var(--accent); }
+  .proj-cat { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); font-weight: 500; margin-bottom: 12px; }
+  .proj-title { font-size: clamp(28px, 4.2vw, 48px); line-height: 1.05; margin-bottom: 8px; }
+  .proj-sub { font-size: clamp(13px, 1.5vw, 16px); color: var(--text-muted); font-weight: 300; margin-bottom: 24px; }
+  .proj-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; max-width: 480px; }
+  .proj-imgs { padding: clamp(28px, 4vw, 48px) 0; }
+  .proj-imgs img { width: 100%; margin-bottom: clamp(12px, 1.8vw, 20px); background: var(--surface); transition: transform .4s; }
+  .proj-imgs img:hover { transform: scale(1.008); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 1.5vw, 16px); margin-bottom: clamp(12px, 1.8vw, 20px); }
+  .pair img { margin-bottom: 0; }
+
+  /* SUB-PROJECT */
+  .sub-title {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(20px, 3vw, 32px);
+    margin: clamp(40px, 6vw, 72px) 0 clamp(20px, 3vw, 32px);
+    padding-left: 16px;
+    border-left: 2px solid var(--accent);
+    color: var(--text);
+    opacity: 0.85;
+  }
+
+  /* SOFTWARE */
+  .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; padding-bottom: clamp(90px, 12vw, 160px); }
+  .sk { background: var(--surface); padding: clamp(24px, 3vw, 36px) clamp(18px, 2vw, 28px); }
+  .sk h4 { font-size: clamp(14px, 1.6vw, 17px); color: var(--accent); margin-bottom: 12px; letter-spacing: 0.04em; }
+  .sk p { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+  /* AWARDS */
+  .awards { padding-bottom: clamp(60px, 8vw, 90px); }
+  .aw { display: grid; grid-template-columns: 70px 1fr 160px; gap: 20px; align-items: center; padding: clamp(18px, 2.5vw, 28px) clamp(16px, 2.5vw, 28px); background: var(--surface); margin-bottom: 1px; }
+  .aw-y { font-family: 'DM Serif Display', Georgia, serif; font-size: 18px; color: var(--accent); }
+  .aw-n { font-size: clamp(14px, 1.6vw, 17px); font-weight: 500; }
+  .aw-p { text-align: right; font-size: 12px; color: var(--text-muted); }
+
+  /* FOOTER */
+  .footer { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 64px); padding: clamp(60px, 10vw, 120px) 0 clamp(32px, 4vw, 48px); border-top: 1px solid var(--rule); }
+  .footer h2 { font-size: clamp(26px, 3.5vw, 38px); }
+  .footer p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+  .footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+  .footer a:hover { border-color: var(--accent); }
+
+  /* REVEAL */
+  .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+  .rv.sh { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    .sec-head, .proj-header { grid-template-columns: 1fr; }
+    .caps { grid-template-columns: 1fr 1fr; }
+    .skills { grid-template-columns: 1fr 1fr; }
+    .aw { grid-template-columns: 1fr; gap: 4px; }
+    .aw-p { text-align: left; }
+    .pair { grid-template-columns: 1fr; }
+    .footer { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 500px) {
+    .caps { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <section class="hero rv">
+    <div class="hero-num">2026</div>
+    <h1 class="hero-name">石易鑫</h1>
+    <p class="hero-sub">环境艺术设计 · 作品集</p>
+    <div class="hero-meta">
+      <span>湘西</span>
+      <span>效果图表现 / 景观设计 / 室内设计</span>
+      <span>2149314571@qq.com</span>
+    </div>
+  </section>
+
+  <section class="sec-head rv"><div class="sec-num">CAPABILITIES</div><h2 class="sec-title">核心能力总览</h2></section>
+  <section class="caps rv">
+    <div class="cap"><span>01</span><h4>室内设计</h4><p>商业空间 · 酒店改造 · 住宅全案</p></div>
+    <div class="cap"><span>02</span><h4>酒店设计</h4><p>工业遗址改造 · 空间叙事体验</p></div>
+    <div class="cap"><span>03</span><h4>民宿设计</h4><p>地域文化提取 · 沉浸式旅居空间</p></div>
+    <div class="cap"><span>04</span><h4>景观设计</h4><p>城市广场 · 生态优先设计</p></div>
+    <div class="cap"><span>05</span><h4>效果图表现</h4><p>3ds Max + Corona 写实渲染</p></div>
+    <div class="cap"><span>06</span><h4>AI 辅助设计</h4><p>AI建模辅助 · 智能渲染优化</p></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<!-- ===== 板块一：商业空间设计 ===== -->
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">01</div><h2 class="sec-title">商业空间设计</h2></section>
+
+  <!-- 铝厂改造酒店 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">酒店改造 · 室内设计</div></div>
+      <div>
+        <h3 class="proj-title">怀化铝厂酒店改造</h3>
+        <p class="proj-sub">毕业设计 · 工业遗址改造</p>
+        <p class="proj-desc">怀化铝厂工业遗址改造为精品酒店方案。保留原有钢结构与砖墙肌理，以现代设计语言重构空间叙事。</p>
+      </div>
+    </div>
+    <div class="proj-imgs">
+      <img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/1.png" loading="lazy">
+      <div class="pair"><img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/111.png" loading="lazy"><img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/1_4..png" loading="lazy"></div>
+      <img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/3.png" loading="lazy">
+      <div class="pair"><img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/4.png" loading="lazy"><img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/5.png" loading="lazy"></div>
+      <img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/6.png" loading="lazy">
+      <div class="pair"><img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/7.png" loading="lazy"><img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/s4000.png" loading="lazy"></div>
+      <img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/厂房改造度假酒店设计项目.png" loading="lazy">
+      <div class="pair"><img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/标准客房.png" loading="lazy"><img src="WebP/商业空间设计/效果图精选/铝厂改造酒店/终稿2.png" loading="lazy"></div>
+    </div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 苗韵展馆 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">商业空间 · 室内设计</div></div>
+      <div>
+        <h3 class="proj-title">苗韵展馆</h3>
+        <p class="proj-sub">民族文化展馆 · 商业空间</p>
+        <p class="proj-desc">苗族文化主题展馆室内设计。将传统纹样、色彩体系与空间结构进行现代表达，以当代设计语言转译民族文化符号。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="miaoyun-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 书山广场改造 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">景观 · 城市广场</div></div>
+      <div>
+        <h3 class="proj-title">书山广场改造</h3>
+        <p class="proj-sub">城市公共空间 · 文化广场</p>
+        <p class="proj-desc">以"书山有路"为概念的城市广场改造，将阅读文化与公共空间融合，打造市民文化休闲新地标。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="shushan-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 咖啡厅 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">商业空间 · 室内设计</div></div>
+      <div>
+        <h3 class="proj-title">咖啡厅设计</h3>
+        <p class="proj-sub">商业餐饮空间</p>
+        <p class="proj-desc">以当代简约美学打造精品咖啡空间，通过材质对比与光影设计营造舒适而有格调的社交场所。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="cafe-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 学校大门改造 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">建筑设计 · 外立面</div></div>
+      <div>
+        <h3 class="proj-title">学校大门改造</h3>
+        <p class="proj-sub">教育建筑 · 入口空间</p>
+        <p class="proj-desc">以现代简洁的设计语言重塑校园入口形象，兼顾标志性与功能性，打造开放包容的校园第一印象。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="school-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 户外亲子公园 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">景观设计 · 亲子空间</div></div>
+      <div>
+        <h3 class="proj-title">户外亲子公园</h3>
+        <p class="proj-sub">亲子游乐 · 自然探索</p>
+        <p class="proj-desc">以儿童友好为核心设计理念，融合自然教育与游乐体验，打造安全、趣味、有教育意义的亲子户外空间。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="park-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 景观公园 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">景观设计</div></div>
+      <div>
+        <h3 class="proj-title">景观公园</h3>
+        <p class="proj-sub">城市公园 · 生态景观</p>
+        <p class="proj-desc">以生态优先为原则，平衡功能需求与美学表达，创造人与自然和谐共生的城市绿洲。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="landscape-imgs"></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<!-- ===== 板块二：家居设计 ===== -->
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">02</div><h2 class="sec-title">家居设计</h2></section>
+
+  <!-- 原木风家居 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">住宅 · 室内设计</div></div>
+      <div>
+        <h3 class="proj-title">原木风家居设计</h3>
+        <p class="proj-sub">自然肌理 · 温暖触感</p>
+        <p class="proj-desc">以原木为核心材质，强调自然肌理与温暖触感，打造回归本真的居住空间。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="wood-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 宋氏美学家居 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">住宅 · 东方美学</div></div>
+      <div>
+        <h3 class="proj-title">宋氏美学家居设计</h3>
+        <p class="proj-sub">留白 · 克制 · 雅致</p>
+        <p class="proj-desc">以宋代美学为底色，以留白与克制演绎雅致生活，追求空间的精神性与仪式感。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="song-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 民宿设计 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">民宿 · 室内设计</div></div>
+      <div>
+        <h3 class="proj-title">民宿设计</h3>
+        <p class="proj-sub">地域文化与现代旅居</p>
+        <p class="proj-desc">提取在地文化符号与自然材质，通过光影、材料与空间节奏营造沉浸式旅居体验。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="minsu-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 简约家居 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">住宅 · 现代简约</div></div>
+      <div>
+        <h3 class="proj-title">简约家居设计</h3>
+        <p class="proj-sub">功能 · 形式 · 极致平衡</p>
+        <p class="proj-desc">追求功能与形式的极致平衡，以简洁线条和克制配色演绎当代都市生活美学。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="simple-imgs"></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<!-- ===== 板块三：项目落地 ===== -->
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">03</div><h2 class="sec-title">项目落地</h2></section>
+
+  <!-- 云南可口可乐博物馆 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">品牌空间 · 博物馆</div></div>
+      <div>
+        <h3 class="proj-title">云南可口可乐博物馆</h3>
+        <p class="proj-sub">品牌文化展示空间 · 40W独立完成</p>
+        <p class="proj-desc">可口可乐品牌文化展示空间全案设计。从概念到落地完整把控，将品牌百年历史与云南地域文化融合。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="museum-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 厦门可口可乐办公楼 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">办公空间 · 室内设计</div></div>
+      <div>
+        <h3 class="proj-title">厦门可口可乐办公楼</h3>
+        <p class="proj-sub">企业办公空间设计</p>
+        <p class="proj-desc">以品牌活力为核心，打造兼具专业性与创意氛围的现代企业办公空间，激发团队协作与创新。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="office-imgs"></div>
+  </section>
+
+  <div class="hr"></div>
+
+  <!-- 湛江可口可乐饭堂 -->
+  <section class="rv">
+    <div class="proj-header">
+      <div class="proj-meta"><div class="proj-cat">餐饮空间 · 室内设计</div></div>
+      <div>
+        <h3 class="proj-title">湛江可口可乐饭堂改造</h3>
+        <p class="proj-sub">企业食堂翻新改造</p>
+        <p class="proj-desc">以明亮、高效、舒适为设计导向，重塑企业食堂的空间体验，提升员工用餐品质与幸福感。</p>
+      </div>
+    </div>
+    <div class="proj-imgs" id="canteen-imgs"></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">TOOLS</div><h2 class="sec-title">软件能力</h2></section>
+  <section class="skills rv">
+    <div class="sk"><h4>建模与渲染</h4><p>3ds Max<br>Corona Renderer<br>VRay</p></div>
+    <div class="sk"><h4>后期与表现</h4><p>Photoshop<br>CAD 施工图<br>VR 技术</p></div>
+    <div class="sk"><h4>方案与协作</h4><p>主案设计<br>景观设计<br>动画渲染</p></div>
+    <div class="sk"><h4>前沿探索</h4><p>AI 辅助建模<br>智能渲染优化<br>参数化设计</p></div>
+  </section>
+</div>
+
+<div class="container"><div class="hr"></div></div>
+
+<div class="container">
+  <section class="sec-head rv"><div class="sec-num">HONORS</div><h2 class="sec-title">获奖经历</h2></section>
+  <section class="awards rv">
+    <div class="aw"><div class="aw-y">2023</div><div class="aw-n">"楚怡杯"湖南省技能大赛</div><div class="aw-p">一等奖</div></div>
+    <div class="aw"><div class="aw-y">2022</div><div class="aw-n">一带一路暨金砖国家技能大赛</div><div class="aw-p">一等奖</div></div>
+    <div class="aw"><div class="aw-y">2022</div><div class="aw-n">"楚怡杯"湖南省技能大赛</div><div class="aw-p">一等奖 · 获面试专升本资格</div></div>
+    <div class="aw"><div class="aw-y">2021</div><div class="aw-n">"CCVR"中国虚拟现实大赛</div><div class="aw-p">二等奖</div></div>
+  </section>
+</div>
+
+<div class="container">
+  <footer class="footer rv">
+    <div><h2>石易鑫</h2><p style="margin-top:6px">环境艺术设计 · PORTFOLIO 2026</p></div>
+    <div><p>湘西</p><p><a href="mailto:2149314571@qq.com">2149314571@qq.com</a></p><p>13467406613</p><p style="margin-top:10px;font-size:12px">3ds Max · Corona · Photoshop</p></div>
+  </footer>
+</div>
+
+<script>
+// Dynamically load images from WebP directory structure
+const imgGroups = {
+  'miaoyun-imgs': {
+    base: 'WebP/商业空间设计/效果图精选/苗韵展馆',
+    files: null // will be glob-matched via the list below
+  },
+  'shushan-imgs': {
+    base: 'WebP/商业空间设计/效果图精选/书山广场改造',
+    files: null
+  },
+  'cafe-imgs': {
+    base: 'WebP/商业空间设计/效果图精选/咖啡厅',
+    files: null
+  },
+  'school-imgs': {
+    base: 'WebP/商业空间设计/效果图精选/学校大门改造',
+    files: null
+  },
+  'park-imgs': {
+    base: 'WebP/商业空间设计/效果图精选/户外亲子公园',
+    files: null
+  },
+  'landscape-imgs': {
+    base: 'WebP/商业空间设计/效果图精选/景观公园',
+    files: null
+  },
+  'wood-imgs': {
+    base: 'WebP/家居设计/效果图精选/原木风家居设计',
+    files: null
+  },
+  'song-imgs': {
+    base: 'WebP/家居设计/效果图精选/宋氏美学家居设计',
+    files: null
+  },
+  'minsu-imgs': {
+    base: 'WebP/家居设计/效果图精选/民宿设计',
+    files: null
+  },
+  'simple-imgs': {
+    base: 'WebP/家居设计/效果图精选/简约家居设计',
+    files: null
+  },
+  'museum-imgs': {
+    base: 'WebP/项目落地/效果图精选/云南可口可乐博物馆',
+    files: null
+  },
+  'office-imgs': {
+    base: 'WebP/项目落地/效果图精选/厦门可口可乐公司办公楼设计',
+    files: null
+  },
+  'canteen-imgs': {
+    base: 'WebP/项目落地/效果图精选/湛江可口可乐饭堂翻新改造',
+    files: null
+  }
+};
+
+// File lists for each directory (pre-computed from the actual filesystem)
+const fileLists = {
+  'miaoyun-imgs': [
+    'jimeng-2026-05-29-1111-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-1676-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-3840-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-4022-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-5885-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-7480-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9268-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9331-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9511-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp'
+  ],
+  'shushan-imgs': [
+    'jimeng-2026-05-29-1361-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-3090-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-4097-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-5861-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-7814-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-8460-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9662-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9979-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp'
+  ],
+  'cafe-imgs': [
+    'jimeng-2026-05-29-3034-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-3441-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp'
+  ],
+  'school-imgs': [
+    'jimeng-2026-05-29-9779-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    '效果图.webp'
+  ],
+  'park-imgs': [
+    'jimeng-2026-05-29-3595-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-3645-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-3984-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-5282-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-5867-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9147-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp'
+  ],
+  'landscape-imgs': [
+    'jimeng-2026-05-29-2123-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-7024-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9618-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp'
+  ],
+  'wood-imgs': [
+    'jimeng-2026-05-29-2738-将生66cb323c-4597-4ea1-a29d-36fe394e38c5成一....webp',
+    'jimeng-2026-05-29-5249-将生42c74d3b-e3bd-4984-9586-f36efb9082b3成一....webp',
+    'jimeng-2026-05-29-6281-将生725ad8d6-1649-41b7-a9c8-badfe716c0c8成一....webp',
+    'jimeng-2026-05-29-7224-将生6ebdfdd4-d413-4ff6-bc3d-45ee71246bf3成一....webp',
+    'jimeng-2026-05-29-8084-将生客餐厨一体(图1)成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，....webp'
+  ],
+  'song-imgs': [
+    '中式屏风.webp',
+    '人物场景.webp',
+    '光影运用.webp',
+    '客餐厅一体.webp',
+    '微距特写.webp',
+    '特写镜头.webp'
+  ],
+  'minsu-imgs': [
+    'jimeng-2026-05-29-1703-将a42c9369-a9d8-4324-a096-a7b21cb189e0生成一....png',
+    'jimeng-2026-05-29-3935-将光影迷人生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保....png',
+    'png/jimeng-2026-06-08-2340-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，给地面添加与环境相....png',
+    'png/jimeng-2026-06-08-3666-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，给地面添加与环境相....png',
+    'png/jimeng-2026-06-08-3914-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....png',
+    'png/jimeng-2026-06-08-4282-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....png',
+    'png/jimeng-2026-06-08-4387-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....png',
+    'png/jimeng-2026-06-08-6361-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....png',
+    'png/jimeng-2026-06-08-6588-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....png'
+  ],
+  'simple-imgs': [
+    'jimeng-2026-05-29-1429-将！图片1生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保....webp',
+    'jimeng-2026-05-29-4857-将图片1生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持....webp',
+    'jimeng-2026-05-29-7087-将图片1生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持....webp'
+  ],
+  'museum-imgs': [
+    'jimeng-2026-05-29-1244-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-1877-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-4145-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-4616-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-4895-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-6896-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-8347-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9154-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9661-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp'
+  ],
+  'office-imgs': [
+    'jimeng-2026-05-29-1693-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-2686-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-3589-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-3875-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-4473-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-4634-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-5684-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9352-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9766-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp'
+  ],
+  'canteen-imgs': [
+    'jimeng-2026-05-29-6933-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-7186-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-7336-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-7471-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-7680-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-7841-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-8410-将生成一张照片级真实的室外设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp',
+    'jimeng-2026-05-29-9758-将生成一张照片级真实的室内设计渲染图，构图与相机角度完全不变，所有家具保持在完全....webp'
+  ]
+};
+
+// Render images for each group
+Object.entries(fileLists).forEach(([containerId, files]) => {
+  const container = document.getElementById(containerId);
+  if (!container || !files.length) return;
+  const base = imgGroups[containerId].base;
+  files.forEach((f, i) => {
+    const src = base + '/' + encodeURI(f);
+    if (i % 3 === 0 && i + 1 < files.length) {
+      // Full then pair
+      const full = document.createElement('img');
+      full.src = src;
+      full.loading = 'lazy';
+      container.appendChild(full);
+
+      const pair = document.createElement('div');
+      pair.className = 'pair';
+      const nextFile = files[i + 1];
+      if (nextFile) {
+        const img2 = document.createElement('img');
+        img2.src = base + '/' + encodeURI(nextFile);
+        img2.loading = 'lazy';
+        pair.appendChild(img2);
+      }
+      const thirdFile = files[i + 2];
+      if (thirdFile) {
+        const img3 = document.createElement('img');
+        img3.src = base + '/' + encodeURI(thirdFile);
+        img3.loading = 'lazy';
+        pair.appendChild(img3);
+      }
+      container.appendChild(pair);
+      // Skip the paired files in the main loop
+      files[i + 1] = null;
+      files[i + 2] = null;
+    } else if (files[i] !== null && (i === 0 || (i - 1) % 3 !== 0 || files[i - 1] === null)) {
+      // Already handled in pair above, but handle edge cases
+    }
+  });
+  // Fallback: simpler approach - just render sequentially with alternating layout
+  container.innerHTML = '';
+  const cleanFiles = files.filter(f => f !== null);
+  // Actually let me redo this cleaner
+  cleanFiles.forEach((f, i) => {
+    const src = base + '/' + encodeURI(f);
+    const img = document.createElement('img');
+    img.src = src;
+    img.loading = 'lazy';
+    container.appendChild(img);
+  });
+});
+
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('sh'); obs.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

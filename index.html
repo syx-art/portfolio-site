@@ -3,653 +3,560 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>鐭虫槗閼?路 鐜鑹烘湳璁捐 路 PORTFOLIO 2026</title>
-
+<title>石易鑫 · 环境艺术设计 · PORTFOLIO 2026</title>
 <style>
-  :root {
-    --bg: #faf8f5;
-    --text: #1a1817;
-    --text-muted: #8a8580;
-    --accent: #b8956a;
-    --accent-dim: #d4c4aa;
-    --rule: #e0dbd4;
-    --surface: #f3f0eb;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    font-size: clamp(15px, 1.6vw, 17px);
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-  h1, h2, h3, h4, .serif {
-    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-  }
-  img { display: block; max-width: 100%; height: auto; }
-  .container { max-width: 1400px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 60px); }
+    :root {
+      --bg: #faf8f5; --text: #1a1817; --text-muted: #8a8580;
+      --accent: #b8956a; --accent-dim: #d4c4aa; --rule: #e0dbd4; --surface: #f3f0eb;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      font-size: 15px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 64px); }
 
-  /* HERO */
-  .hero {
-    min-height: 100vh; display: flex; align-items: center;
-    position: relative; overflow: hidden;
-    padding: clamp(60px, 10vw, 120px) 0;
-  }
-  .hero::before {
-    content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 70% 30%, rgba(184,149,106,0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 80%, rgba(184,149,106,0.05) 0%, transparent 50%);
-  }
-  .hero-num {
-    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
-    font-size: clamp(100px, 16vw, 240px); line-height: 0.85;
-    color: transparent; opacity: 0.5; margin-bottom: -0.1em; user-select: none;
-  }
-  .hero-name { font-size: clamp(38px, 6vw, 72px); line-height: 1.05; }
-  .hero-sub { font-size: clamp(14px, 1.8vw, 18px); color: var(--text-muted); font-weight: 300; letter-spacing: 0.06em; text-transform: uppercase; margin: 8px 0 clamp(36px, 5vw, 52px); }
-  .hero-meta { display: flex; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap; font-size: 13px; color: var(--text-muted); }
-  .hero-meta span { display: flex; align-items: center; gap: 8px; }
-  .hero-meta span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+    /* Hero */
+    .hero {
+      min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 30%, rgba(184,149,106,0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 30% 80%, rgba(184,149,106,0.04) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-num {
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
+      font-size: clamp(120px, 18vw, 260px); font-weight: 700;
+      color: transparent; opacity: 0.5; margin-bottom: -0.1em; user-select: none;
+      -webkit-text-stroke: 1px var(--rule); line-height: 0.85;
+    }
+    .hero-name {
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
+      font-size: clamp(40px, 6vw, 72px); font-weight: 600; letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+    .hero-sub {
+      font-size: clamp(14px, 1.8vw, 18px); color: var(--text-muted); font-weight: 300;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin: 8px 0 clamp(36px, 5vw, 52px);
+    }
+    .hero-meta {
+      display: flex; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap;
+      font-size: 13px; color: var(--text-muted);
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 8px; }
+    .hero-meta span::before {
+      content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+    }
 
-  /* SECTION HEADER */
-  .sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: end; padding: clamp(90px, 12vw, 160px) 0 clamp(36px, 4vw, 60px); }
-  .sec-num {
-    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
-    font-size: clamp(50px, 9vw, 120px); line-height: 0.9;
-    color: transparent; -webkit-text-stroke: 1px var(--rule); opacity: 0.35;
-  }
-  .sec-title { font-size: clamp(24px, 3.5vw, 42px); line-height: 1.1; }
+    /* Section headers */
+    .sec-head {
+      display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px);
+      align-items: end; padding: clamp(90px, 12vw, 160px) 0 clamp(36px, 4vw, 60px);
+    }
+    .sec-num {
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
+      font-size: clamp(48px, 7vw, 96px); font-weight: 700; line-height: 1;
+      color: transparent; -webkit-text-stroke: 1px var(--rule); opacity: 0.35;
+    }
+    .sec-title {
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
+      font-size: clamp(24px, 3.2vw, 36px); font-weight: 500; letter-spacing: 0.05em;
+    }
 
-  /* CAPABILITIES */
-  .caps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; padding-bottom: clamp(90px, 12vw, 160px); }
-  .cap { background: var(--surface); padding: clamp(28px, 3.5vw, 44px) clamp(18px, 2.5vw, 32px); transition: background .3s; }
-  .cap:hover { background: #eeebe4; }
-  .cap span { font-size: 12px; color: var(--accent); letter-spacing: 0.1em; font-weight: 500; }
-  .cap h4 { font-size: clamp(17px, 2vw, 22px); margin: 8px 0 6px; }
-  .cap p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    /* Capabilities */
+    .caps {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+      padding-bottom: clamp(90px, 12vw, 160px);
+    }
+    .cap { background: var(--surface); padding: clamp(28px, 3.5vw, 44px) clamp(18px, 2.5vw, 32px); transition: background .3s; }
+    .cap:hover { background: #eeebe4; }
+    .cap-num { font-size: 12px; color: var(--accent); letter-spacing: 0.1em; font-weight: 500; display: block; margin-bottom: 8px; }
+    .cap h4 { font-size: clamp(15px, 1.8vw, 19px); color: var(--text); margin-bottom: 6px; font-weight: 600; }
+    .cap p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-  /* DIVIDER */
-  .hr { height: 1px; background: var(--rule); margin: clamp(80px, 10vw, 140px) 0; }
+    /* Dividers */
+    .hr { height: 1px; background: var(--rule); margin: clamp(80px, 10vw, 140px) 0; }
 
-  /* PROJECT */
-  .proj-header { display: grid; grid-template-columns: 200px 1fr; gap: clamp(28px, 4vw, 52px); align-items: start; padding-top: clamp(60px, 8vw, 100px); }
-  .proj-meta { padding-left: 20px; position: relative; }
-  .proj-meta::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: var(--accent); }
-  .proj-cat { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); font-weight: 500; margin-bottom: 12px; }
-  .proj-title { font-size: clamp(28px, 4.2vw, 48px); line-height: 1.05; margin-bottom: 8px; }
-  .proj-sub { font-size: clamp(13px, 1.5vw, 16px); color: var(--text-muted); font-weight: 300; margin-bottom: 24px; }
-  .proj-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; max-width: 480px; }
-  .proj-imgs { padding: clamp(28px, 4vw, 48px) 0; }
-  .proj-imgs img { width: 100%; margin-bottom: clamp(12px, 1.8vw, 20px); background: var(--surface); transition: transform .4s; }
-  .proj-imgs img:hover { transform: scale(1.008); }
-  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 1.5vw, 16px); margin-bottom: clamp(12px, 1.8vw, 20px); }
-  .pair img { margin-bottom: 0; }
+    /* Project cards */
+    .proj-header {
+      display: grid; grid-template-columns: 200px 1fr; gap: clamp(28px, 4vw, 52px);
+      align-items: start; padding-top: clamp(60px, 8vw, 100px);
+    }
+    .proj-meta { padding-left: 20px; position: relative; }
+    .proj-meta::before {
+      content: ''; position: absolute; left: 0; top: 4px; bottom: 4px;
+      width: 1px; background: var(--accent);
+    }
+    .proj-cat {
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+      color: var(--accent); font-weight: 500; margin-bottom: 12px;
+    }
+    .proj-sub { font-size: clamp(13px, 1.5vw, 16px); color: var(--text-muted); font-weight: 300; margin-bottom: 24px; }
+    .proj-header h3 {
+      font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
+      font-size: clamp(22px, 2.8vw, 32px); font-weight: 600; letter-spacing: 0.04em;
+      margin-bottom: 16px; color: var(--text);
+    }
+    .proj-desc { font-size: 13px; color: var(--text-muted); line-height: 1.7; max-width: 480px; }
+    .proj-imgs { padding-top: clamp(28px, 4vw, 48px); }
+    .proj-imgs img {
+      width: 100%; margin-bottom: clamp(12px, 1.8vw, 20px);
+      background: var(--surface); transition: transform .4s;
+      display: block;
+    }
+    .proj-imgs img:hover { transform: scale(1.008); }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 1.5vw, 16px); margin-bottom: clamp(12px, 1.8vw, 20px); }
+    .pair img { margin-bottom: 0 !important; }
 
-  /* SUB-PROJECT */
-  .sub-title {
-    font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif;
-    font-size: clamp(20px, 3vw, 32px);
-    margin: clamp(40px, 6vw, 72px) 0 clamp(20px, 3vw, 32px);
-    padding-left: 16px;
-    border-left: 2px solid var(--accent);
-    color: var(--text);
-    opacity: 0.85;
-  }
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; padding-bottom: clamp(90px, 12vw, 160px); }
+    .sk { background: var(--surface); padding: clamp(24px, 3vw, 36px) clamp(18px, 2vw, 28px); }
+    .sk h4 { font-size: clamp(14px, 1.6vw, 17px); color: var(--accent); margin-bottom: 12px; letter-spacing: 0.04em; }
+    .sk p { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
 
-  /* SOFTWARE */
-  .skills { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; padding-bottom: clamp(90px, 12vw, 160px); }
-  .sk { background: var(--surface); padding: clamp(24px, 3vw, 36px) clamp(18px, 2vw, 28px); }
-  .sk h4 { font-size: clamp(14px, 1.6vw, 17px); color: var(--accent); margin-bottom: 12px; letter-spacing: 0.04em; }
-  .sk p { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+    /* Awards */
+    .awards { padding-bottom: clamp(90px, 12vw, 160px); }
+    .aw {
+      display: grid; grid-template-columns: 70px 1fr 160px; gap: 20px; align-items: center;
+      padding: clamp(18px, 2.5vw, 28px) clamp(16px, 2.5vw, 28px);
+      background: var(--surface); margin-bottom: 1px;
+    }
+    .aw-y { font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif; font-size: 18px; color: var(--accent); }
+    .aw-t { font-size: clamp(13px, 1.4vw, 15px); }
+    .aw-p { text-align: right; font-size: 12px; color: var(--text-muted); }
 
-  /* AWARDS */
-  .awards { padding-bottom: clamp(60px, 8vw, 90px); }
-  .aw { display: grid; grid-template-columns: 70px 1fr 160px; gap: 20px; align-items: center; padding: clamp(18px, 2.5vw, 28px) clamp(16px, 2.5vw, 28px); background: var(--surface); margin-bottom: 1px; }
-  .aw-y { font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, 'Times New Roman', serif; font-size: 18px; color: var(--accent); }
-  .aw-n { font-size: clamp(14px, 1.6vw, 17px); font-weight: 500; }
-  .aw-p { text-align: right; font-size: 12px; color: var(--text-muted); }
+    /* Footer */
+    .footer {
+      display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 64px);
+      padding: clamp(60px, 10vw, 120px) 0 clamp(32px, 4vw, 48px);
+      border-top: 1px solid var(--rule);
+    }
+    .footer p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+    .footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+    .footer a:hover { border-color: var(--accent); }
 
-  /* FOOTER */
-  .footer { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 64px); padding: clamp(60px, 10vw, 120px) 0 clamp(32px, 4vw, 48px); border-top: 1px solid var(--rule); }
-  .footer h2 { font-size: clamp(26px, 3.5vw, 38px); }
-  .footer p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
-  .footer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
-  .footer a:hover { border-color: var(--accent); }
+    /* Reveal animations */
+    .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
+    .rv.sh { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
 
-  /* REVEAL */
-  .rv { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
-  .rv.sh { opacity: 1; transform: translateY(0); }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .caps { grid-template-columns: 1fr; }
+      .skills { grid-template-columns: 1fr 1fr; }
+      .sec-head { grid-template-columns: 1fr; gap: 24px; }
+      .proj-header { grid-template-columns: 1fr; gap: 20px; }
+      .proj-meta { padding-left: 0; }
+      .proj-meta::before { display: none; }
+      .aw { grid-template-columns: 60px 1fr; }
+      .aw-p { display: none; }
+      .footer { grid-template-columns: 1fr; gap: 24px; }
+      .hero-num { font-size: clamp(80px, 25vw, 140px); }
+    }
+    @media (max-width: 480px) {
+      .pair { grid-template-columns: 1fr; }
+      .skills { grid-template-columns: 1fr; }
+      .hero-meta { flex-direction: column; gap: 10px; }
+    }
 
-  @media (max-width: 900px) {
-    .sec-head, .proj-header { grid-template-columns: 1fr; }
-    .caps { grid-template-columns: 1fr 1fr; }
-    .skills { grid-template-columns: 1fr 1fr; }
-    .aw { grid-template-columns: 1fr; gap: 4px; }
-    .aw-p { text-align: left; }
-    .pair { grid-template-columns: 1fr; }
-    .footer { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 500px) {
-    .caps { grid-template-columns: 1fr; }
-    .skills { grid-template-columns: 1fr; }
-  }
-  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <section class="hero rv">
-    <div class="hero-num">2026</div>
-    <h1 class="hero-name">鐭虫槗閼?/h1>
-    <p class="hero-sub">鐜鑹烘湳璁捐 路 浣滃搧闆?/p>
-    <div class="hero-meta">
-      <span>婀樿タ</span>
-      <span>鏁堟灉鍥捐〃鐜?/ 鏅璁捐 / 瀹ゅ唴璁捐</span>
-      <span>2149314571@qq.com</span>
-    </div>
-  </section>
-
-  <section class="sec-head rv"><div class="sec-num">CAPABILITIES</div><h2 class="sec-title">鏍稿績鑳藉姏鎬昏</h2></section>
-  <section class="caps rv">
-    <div class="cap"><span>01</span><h4>瀹ゅ唴璁捐</h4><p>鍟嗕笟绌洪棿 路 閰掑簵鏀归€?路 浣忓畢鍏ㄦ</p></div>
-    <div class="cap"><span>02</span><h4>閰掑簵璁捐</h4><p>宸ヤ笟閬楀潃鏀归€?路 绌洪棿鍙欎簨浣撻獙</p></div>
-    <div class="cap"><span>03</span><h4>姘戝璁捐</h4><p>鍦板煙鏂囧寲鎻愬彇 路 娌夋蹈寮忔梾灞呯┖闂?/p></div>
-    <div class="cap"><span>04</span><h4>鏅璁捐</h4><p>鍩庡競骞垮満 路 鐢熸€佷紭鍏堣璁?/p></div>
-    <div class="cap"><span>05</span><h4>鏁堟灉鍥捐〃鐜?/h4><p>3ds Max + Corona 鍐欏疄娓叉煋</p></div>
-    <div class="cap"><span>06</span><h4>AI 杈呭姪璁捐</h4><p>AI寤烘ā杈呭姪 路 鏅鸿兘娓叉煋浼樺寲</p></div>
-  </section>
-</div>
-
-<div class="container"><div class="hr"></div></div>
-
-<!-- ===== 鏉垮潡涓€锛氬晢涓氱┖闂磋璁?===== -->
-<div class="container">
-  <section class="sec-head rv"><div class="sec-num">01</div><h2 class="sec-title">鍟嗕笟绌洪棿璁捐</h2></section>
-
-  <!-- 閾濆巶鏀归€犻厭搴?-->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">閰掑簵鏀归€?路 瀹ゅ唴璁捐</div></div>
-      <div>
-        <h3 class="proj-title">鎬€鍖栭摑鍘傞厭搴楁敼閫?/h3>
-        <p class="proj-sub">姣曚笟璁捐 路 宸ヤ笟閬楀潃鏀归€?/p>
-        <p class="proj-desc">鎬€鍖栭摑鍘傚伐涓氶仐鍧€鏀归€犱负绮惧搧閰掑簵鏂规銆備繚鐣欏師鏈夐挗缁撴瀯涓庣爾澧欒倢鐞嗭紝浠ョ幇浠ｈ璁¤瑷€閲嶆瀯绌洪棿鍙欎簨銆?/p>
+<section class="hero rv">
+      <div class="hero-num">2026</div>
+      <h1 class="hero-name">石易鑫</h1>
+      <p class="hero-sub">环境艺术设计 &middot; 作品集</p>
+      <div class="hero-meta">
+        <span>湘西</span>
+        <span>效果图表现 / 景观设计 / 室内设计</span>
+        <span>2149314571@qq.com</span>
       </div>
-    </div>
-    <div class="proj-imgs">
-      <img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?1.webp" loading="lazy">
-      <div class="pair"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?111.webp" loading="lazy"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?1_4..webp" loading="lazy"></div>
-      <img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?3.webp" loading="lazy">
-      <div class="pair"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?4.webp" loading="lazy"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?5.webp" loading="lazy"></div>
-      <img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?6.webp" loading="lazy">
-      <div class="pair"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?7.webp" loading="lazy"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?s4000.webp" loading="lazy"></div>
-      <img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?鍘傛埧鏀归€犲害鍋囬厭搴楄璁￠」鐩?png" loading="lazy">
-      <div class="pair"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?鏍囧噯瀹㈡埧.webp" loading="lazy"><img src="WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?閾濆巶鏀归€犻厭搴?缁堢2.webp" loading="lazy"></div>
-    </div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 鑻楅煹灞曢 -->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">鍟嗕笟绌洪棿 路 瀹ゅ唴璁捐</div></div>
-      <div>
-        <h3 class="proj-title">鑻楅煹灞曢</h3>
-        <p class="proj-sub">姘戞棌鏂囧寲灞曢 路 鍟嗕笟绌洪棿</p>
-        <p class="proj-desc">鑻楁棌鏂囧寲涓婚灞曢瀹ゅ唴璁捐銆傚皢浼犵粺绾规牱銆佽壊褰╀綋绯讳笌绌洪棿缁撴瀯杩涜鐜颁唬琛ㄨ揪锛屼互褰撲唬璁捐璇█杞瘧姘戞棌鏂囧寲绗﹀彿銆?/p>
+    </section>
+    <div class="hr"></div>
+    <section class="rv">
+      <div class="sec-head">
+        <div class="sec-num">CAPABILITIES</div>
+        <h2 class="sec-title">核心能力总览</h2>
       </div>
-    </div>
-    <div class="proj-imgs" id="miaoyun-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 涔﹀北骞垮満鏀归€?-->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">鏅 路 鍩庡競骞垮満</div></div>
-      <div>
-        <h3 class="proj-title">涔﹀北骞垮満鏀归€?/h3>
-        <p class="proj-sub">鍩庡競鍏叡绌洪棿 路 鏂囧寲骞垮満</p>
-        <p class="proj-desc">浠?涔﹀北鏈夎矾"涓烘蹇电殑鍩庡競骞垮満鏀归€狅紝灏嗛槄璇绘枃鍖栦笌鍏叡绌洪棿铻嶅悎锛屾墦閫犲競姘戞枃鍖栦紤闂叉柊鍦版爣銆?/p>
+      <div class="caps">
+        <div class="cap"><span class="cap-num">01</span><h4>室内设计</h4><p>商业空间 &middot; 酒店改造 &middot; 住宅全案</p></div>
+        <div class="cap"><span class="cap-num">02</span><h4>酒店设计</h4><p>工业遗址改造 &middot; 空间叙事体验</p></div>
+        <div class="cap"><span class="cap-num">03</span><h4>民宿设计</h4><p>地域文化提取 &middot; 沉浸式旅居空间</p></div>
+        <div class="cap"><span class="cap-num">04</span><h4>景观设计</h4><p>城市广场 &middot; 生态优先设计</p></div>
+        <div class="cap"><span class="cap-num">05</span><h4>效果图表现</h4><p>3ds Max + Corona 写实渲染</p></div>
+        <div class="cap"><span class="cap-num">06</span><h4>AI 辅助设计</h4><p>AI 建模辅助 &middot; 智能渲染优化</p></div>
       </div>
-    </div>
-    <div class="proj-imgs" id="shushan-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 鍜栧暋鍘?-->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">鍟嗕笟绌洪棿 路 瀹ゅ唴璁捐</div></div>
-      <div>
-        <h3 class="proj-title">鍜栧暋鍘呰璁?/h3>
-        <p class="proj-sub">鍟嗕笟椁愰ギ绌洪棿</p>
-        <p class="proj-desc">浠ュ綋浠ｇ畝绾︾編瀛︽墦閫犵簿鍝佸挅鍟＄┖闂达紝閫氳繃鏉愯川瀵规瘮涓庡厜褰辫璁¤惀閫犺垝閫傝€屾湁鏍艰皟鐨勭ぞ浜ゅ満鎵€銆?/p>
+    </section>
+    <div class="hr"></div>
+    <section class="rv">
+      <div class="sec-head">
+        <div class="sec-num">01</div>
+        <h2 class="sec-title">商业空间设计</h2>
       </div>
-    </div>
-    <div class="proj-imgs" id="cafe-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 瀛︽牎澶ч棬鏀归€?-->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">寤虹瓚璁捐 路 澶栫珛闈?/div></div>
-      <div>
-        <h3 class="proj-title">瀛︽牎澶ч棬鏀归€?/h3>
-        <p class="proj-sub">鏁欒偛寤虹瓚 路 鍏ュ彛绌洪棿</p>
-        <p class="proj-desc">浠ョ幇浠ｇ畝娲佺殑璁捐璇█閲嶅鏍″洯鍏ュ彛褰㈣薄锛屽吋椤炬爣蹇楁€т笌鍔熻兘鎬э紝鎵撻€犲紑鏀惧寘瀹圭殑鏍″洯绗竴鍗拌薄銆?/p>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">酒店改造 · 室内设计</div>
+            <div class="proj-sub">毕业设计 · 工业遗址改造</div>
+          </div>
+          <div>
+            <h3>怀化铝厂酒店改造</h3>
+            <p class="proj-desc">怀化铝厂工业遗址改造为精品酒店方案。保留原有钢结构与砖墙肌理，以现代设计语言重构空间叙事。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <div class="pair">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/1.webp" loading="lazy" alt="">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/111.webp" loading="lazy" alt="">
+          </div>
+          <div class="pair">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/1_4..webp" loading="lazy" alt="">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/3.webp" loading="lazy" alt="">
+          </div>
+          <div class="pair">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/4.webp" loading="lazy" alt="">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/5.webp" loading="lazy" alt="">
+          </div>
+          <div class="pair">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/6.webp" loading="lazy" alt="">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/7.webp" loading="lazy" alt="">
+          </div>
+          <div class="pair">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/s4000.webp" loading="lazy" alt="">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/%E5%8E%82%E6%88%BF%E6%94%B9%E9%80%A0%E5%BA%A6%E5%81%87%E9%85%92%E5%BA%97%E8%AE%BE%E8%AE%A1%E9%A1%B9%E7%9B%AE.png" loading="lazy" alt="">
+          </div>
+          <div class="pair">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/%E6%A0%87%E5%87%86%E5%AE%A2%E6%88%BF.webp" loading="lazy" alt="">
+            <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E9%93%9D%E5%8E%82%E6%94%B9%E9%80%A0%E9%85%92%E5%BA%97/%E7%BB%88%E7%AB%AF2.webp" loading="lazy" alt="">
+          </div>
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">商业空间 · 室内设计</div>
+            <div class="proj-sub">民族文化展馆 · 商业空间</div>
+          </div>
+          <div>
+            <h3>苗韵展馆</h3>
+            <p class="proj-desc">苗族文化主题展馆室内设计。将传统纹样、色彩体系与空间结构进行现代表达，以当代设计语言翻译民族文化符号。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-1111-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-1676-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-3840-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-4460-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-4769-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-5709-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-6189-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-6302-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E8%8B%97%E9%9F%B5%E5%B1%95%E9%A6%86/jimeng-2026-05-29-6590-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">景观 · 城市广场</div>
+            <div class="proj-sub">城市公共空间 · 文化广场</div>
+          </div>
+          <div>
+            <h3>书山广场改造</h3>
+            <p class="proj-desc">以“书山有路”为概念的城市广场改造，将阅读文化与公共空间融合，打造市民文化休闲新地标。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%B9%A6%E5%B1%B1%E5%B9%BF%E5%9C%BA%E6%94%B9%E9%80%A0/jimeng-2026-05-29-1361-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%B9%A6%E5%B1%B1%E5%B9%BF%E5%9C%BA%E6%94%B9%E9%80%A0/jimeng-2026-05-29-3090-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%B9%A6%E5%B1%B1%E5%B9%BF%E5%9C%BA%E6%94%B9%E9%80%A0/jimeng-2026-05-29-4097-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%B9%A6%E5%B1%B1%E5%B9%BF%E5%9C%BA%E6%94%B9%E9%80%A0/jimeng-2026-05-29-5861-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%B9%A6%E5%B1%B1%E5%B9%BF%E5%9C%BA%E6%94%B9%E9%80%A0/jimeng-2026-05-29-7814-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%B9%A6%E5%B1%B1%E5%B9%BF%E5%9C%BA%E6%94%B9%E9%80%A0/jimeng-2026-05-29-8460-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%B9%A6%E5%B1%B1%E5%B9%BF%E5%9C%BA%E6%94%B9%E9%80%A0/jimeng-2026-05-29-9662-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%B9%A6%E5%B1%B1%E5%B9%BF%E5%9C%BA%E6%94%B9%E9%80%A0/jimeng-2026-05-29-9979-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">商业空间 · 室内设计</div>
+            <div class="proj-sub">商业餐饮空间</div>
+          </div>
+          <div>
+            <h3>咖啡厅设计</h3>
+            <p class="proj-desc">以当代简约美学打造精品咖啡空间，通过材质对比与光影设计营造舒适而有格调的社交场所。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%92%96%E5%95%A1%E5%8E%85/jimeng-2026-05-29-3034-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%92%96%E5%95%A1%E5%8E%85/jimeng-2026-05-29-3441-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">建筑设计 · 外立面</div>
+            <div class="proj-sub">教育建筑 · 入口空间</div>
+          </div>
+          <div>
+            <h3>学校大门改造</h3>
+            <p class="proj-desc">以现代简洁的设计语言重塑校园入口形象，兼顾标志性与功能性，打造开放包容的校园第一印象。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%AD%A6%E6%A0%A1%E5%A4%A7%E9%97%A8%E6%94%B9%E9%80%A0/jimeng-2026-05-29-9779-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%AD%A6%E6%A0%A1%E5%A4%A7%E9%97%A8%E6%94%B9%E9%80%A0/%E6%95%88%E6%9E%9C%E5%9B%BE.webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">景观设计 · 亲子空间</div>
+            <div class="proj-sub">亲子游乐 · 自然探索</div>
+          </div>
+          <div>
+            <h3>户外亲子公园</h3>
+            <p class="proj-desc">以儿童友好为核心设计理念，融合自然教育与游乐体验，打造安全、趣味、有教育意义的亲子户外空间。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%88%B7%E5%A4%96%E4%BA%B2%E5%AD%90%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-3595-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%88%B7%E5%A4%96%E4%BA%B2%E5%AD%90%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-3645-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%88%B7%E5%A4%96%E4%BA%B2%E5%AD%90%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-3984-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%88%B7%E5%A4%96%E4%BA%B2%E5%AD%90%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-5282-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%88%B7%E5%A4%96%E4%BA%B2%E5%AD%90%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-5867-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%88%B7%E5%A4%96%E4%BA%B2%E5%AD%90%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-9147-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">景观设计</div>
+            <div class="proj-sub">城市公园 · 生态景观</div>
+          </div>
+          <div>
+            <h3>景观公园</h3>
+            <p class="proj-desc">以生态优先为原则，平衡功能需求与美学表达，创造人与自然和谐共生的城市绿洲。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%99%AF%E8%A7%82%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-2123-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%99%AF%E8%A7%82%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-7024-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%95%86%E4%B8%9A%E7%A9%BA%E9%97%B4%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%99%AF%E8%A7%82%E5%85%AC%E5%9B%AD/jimeng-2026-05-29-9618-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+    </section>
+    <div class="hr"></div>
+    <section class="rv">
+      <div class="sec-head">
+        <div class="sec-num">02</div>
+        <h2 class="sec-title">家居设计</h2>
       </div>
-    </div>
-    <div class="proj-imgs" id="school-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 鎴峰浜插瓙鍏洯 -->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">鏅璁捐 路 浜插瓙绌洪棿</div></div>
-      <div>
-        <h3 class="proj-title">鎴峰浜插瓙鍏洯</h3>
-        <p class="proj-sub">浜插瓙娓镐箰 路 鑷劧鎺㈢储</p>
-        <p class="proj-desc">浠ュ効绔ュ弸濂戒负鏍稿績璁捐鐞嗗康锛岃瀺鍚堣嚜鐒舵暀鑲蹭笌娓镐箰浣撻獙锛屾墦閫犲畨鍏ㄣ€佽叮鍛炽€佹湁鏁欒偛鎰忎箟鐨勪翰瀛愭埛澶栫┖闂淬€?/p>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">住宅 · 室内设计</div>
+            <div class="proj-sub">自然肌理 · 温暖触感</div>
+          </div>
+          <div>
+            <h3>原木风家居设计</h3>
+            <p class="proj-desc">以原木为核心材质，强调自然肌理与温暖触感，打造回归本真的居住空间。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%9F%E6%9C%A8%E9%A3%8E%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-2738-%E5%B0%86%E7%94%9F66cb323c-4597-4ea1-a29d-36fe394e38c5%E6%88%90%E4%B8%80....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%9F%E6%9C%A8%E9%A3%8E%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-5249-%E5%B0%86%E7%94%9F42c74d3b-e3bd-4984-9586-f36efb9082b3%E6%88%90%E4%B8%80....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%9F%E6%9C%A8%E9%A3%8E%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-6281-%E5%B0%86%E7%94%9F725ad8d6-1649-41b7-a9c8-badfe716c0c8%E6%88%90%E4%B8%80....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%9F%E6%9C%A8%E9%A3%8E%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-7645-%E5%B0%86%E7%94%9F9e5b43b1-5280-4ae8-86c1-5f6e20192f05%E6%88%90%E4%B8%80....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%9F%E6%9C%A8%E9%A3%8E%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-9983-%E5%B0%86%E7%94%9Fa9f759d1-37fe-46c0-a4f4-d4e10f255ede%E6%88%90%E4%B8%80....webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">住宅 · 东方美学</div>
+            <div class="proj-sub">留白 · 克制 · 雅致</div>
+          </div>
+          <div>
+            <h3>宋氏美学家居设计</h3>
+            <p class="proj-desc">以宋代美学为底色，以留白与克制演绎雅致生活，追求空间的精神性与仪式感。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%AE%8B%E6%B0%8F%E7%BE%8E%E5%AD%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E4%B8%AD%E5%BC%8F%E5%B1%8F%E9%A3%8E.webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%AE%8B%E6%B0%8F%E7%BE%8E%E5%AD%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E4%BA%BA%E7%89%A9%E5%9C%BA%E6%99%AF.webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%AE%8B%E6%B0%8F%E7%BE%8E%E5%AD%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E5%85%89%E5%BD%B1%E8%BF%90%E7%94%A8.webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%AE%8B%E6%B0%8F%E7%BE%8E%E5%AD%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E5%AE%B6%E5%85%B7%E7%BB%86%E8%8A%82.webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%AE%8B%E6%B0%8F%E7%BE%8E%E5%AD%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%8F%92%E8%8A%B1%E5%9C%BA%E6%99%AF.webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%AE%8B%E6%B0%8F%E7%BE%8E%E5%AD%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%B4%E4%BD%93%E7%A9%BA%E9%97%B4.webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">民宿 · 室内设计</div>
+            <div class="proj-sub">地域文化与现代旅居</div>
+          </div>
+          <div>
+            <h3>民宿设计</h3>
+            <p class="proj-desc">提取在地文化符号与自然材质，通过光影、材料与空间节奏营造沉浸式旅居体验。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-1703-%E5%B0%86a42c9369-a9d8-4324-a096-a7b21cb189e0%E7%94%9F%E6%88%90%E4%B8%80....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-3935-%E5%B0%86%E5%85%89%E5%BD%B1%E8%BF%B7%E4%BA%BA%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/png/jimeng-2026-06-08-2340-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E7%BB%99%E5%9C%B0%E9%9D%A2%E6%B7%BB%E5%8A%A0%E4%B8%8E%E7%8E%AF%E5%A2%83%E7%9B%B8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-4399-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-7158-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-7751-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-8150-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-9867-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B0%91%E5%AE%BF%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-9990-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">住宅 · 现代简约</div>
+            <div class="proj-sub">功能 · 形式 · 极致平衡</div>
+          </div>
+          <div>
+            <h3>简约家居设计</h3>
+            <p class="proj-desc">追求功能与形式的极致平衡，以简洁线条和克制配色演绎当代都市生活美学。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E7%AE%80%E7%BA%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-1429-%E5%B0%86%EF%BC%81%E5%9B%BE%E7%89%871%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E7%AE%80%E7%BA%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-4857-%E5%B0%86%E5%9B%BE%E7%89%871%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81....webp" loading="lazy" alt="">
+          <img src="WebP/%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E7%AE%80%E7%BA%A6%E5%AE%B6%E5%B1%85%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-7087-%E5%B0%86%E5%9B%BE%E7%89%871%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81....webp" loading="lazy" alt="">
+        </div>
+      </article>
+    </section>
+    <div class="hr"></div>
+    <section class="rv">
+      <div class="sec-head">
+        <div class="sec-num">03</div>
+        <h2 class="sec-title">项目落地</h2>
       </div>
-    </div>
-    <div class="proj-imgs" id="park-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 鏅鍏洯 -->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">鏅璁捐</div></div>
-      <div>
-        <h3 class="proj-title">鏅鍏洯</h3>
-        <p class="proj-sub">鍩庡競鍏洯 路 鐢熸€佹櫙瑙?/p>
-        <p class="proj-desc">浠ョ敓鎬佷紭鍏堜负鍘熷垯锛屽钩琛″姛鑳介渶姹備笌缇庡琛ㄨ揪锛屽垱閫犱汉涓庤嚜鐒跺拰璋愬叡鐢熺殑鍩庡競缁挎床銆?/p>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">品牌空间 · 博物馆</div>
+            <div class="proj-sub">品牌文化展示空间 · 40W 独立完成</div>
+          </div>
+          <div>
+            <h3>云南可口可乐博物馆</h3>
+            <p class="proj-desc">可口可乐品牌文化展示空间全案设计。从概念到落地完整把控，将品牌百年历史与云南地域文化融合。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-1244-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-1877-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-4145-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-4574-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-5045-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-5088-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-5551-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-7142-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E4%BA%91%E5%8D%97%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%8D%9A%E7%89%A9%E9%A6%86/jimeng-2026-05-29-8144-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">办公空间 · 室内设计</div>
+            <div class="proj-sub">企业办公空间设计</div>
+          </div>
+          <div>
+            <h3>厦门可口可乐办公楼</h3>
+            <p class="proj-desc">以品牌活力为核心，打造兼具专业性与创意氛围的现代企业办公空间，激发团队协作与创新。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-1693-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-2686-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-3589-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-5548-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-5904-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-6267-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-7997-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-8501-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E5%8E%A6%E9%97%A8%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E5%85%AC%E5%8F%B8%E5%8A%9E%E5%85%AC%E6%A5%BC%E8%AE%BE%E8%AE%A1/jimeng-2026-05-29-9914-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+      <article class="rv">
+        <div class="proj-header">
+          <div class="proj-meta">
+            <div class="proj-cat">餐饮空间 · 室内设计</div>
+            <div class="proj-sub">企业食堂翻新改造</div>
+          </div>
+          <div>
+            <h3>湛江可口可乐饭堂改造</h3>
+            <p class="proj-desc">以明亮、高效、舒适为设计导向，重塑企业食堂的空间体验，提升员工用餐品质与幸福感。</p>
+          </div>
+        </div>
+        <div class="proj-imgs">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B9%9B%E6%B1%9F%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E9%A5%AD%E5%A0%82%E7%BF%BB%E6%96%B0%E6%94%B9%E9%80%A0/jimeng-2026-05-29-6933-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B9%9B%E6%B1%9F%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E9%A5%AD%E5%A0%82%E7%BF%BB%E6%96%B0%E6%94%B9%E9%80%A0/jimeng-2026-05-29-7186-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B9%9B%E6%B1%9F%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E9%A5%AD%E5%A0%82%E7%BF%BB%E6%96%B0%E6%94%B9%E9%80%A0/jimeng-2026-05-29-7336-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%A4%96%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B9%9B%E6%B1%9F%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E9%A5%AD%E5%A0%82%E7%BF%BB%E6%96%B0%E6%94%B9%E9%80%A0/jimeng-2026-05-29-7365-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B9%9B%E6%B1%9F%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E9%A5%AD%E5%A0%82%E7%BF%BB%E6%96%B0%E6%94%B9%E9%80%A0/jimeng-2026-05-29-7730-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B9%9B%E6%B1%9F%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E9%A5%AD%E5%A0%82%E7%BF%BB%E6%96%B0%E6%94%B9%E9%80%A0/jimeng-2026-05-29-9541-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B9%9B%E6%B1%9F%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E9%A5%AD%E5%A0%82%E7%BF%BB%E6%96%B0%E6%94%B9%E9%80%A0/jimeng-2026-05-29-9875-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+          <img src="WebP/%E9%A1%B9%E7%9B%AE%E8%90%BD%E5%9C%B0/%E6%95%88%E6%9E%9C%E5%9B%BE%E7%B2%BE%E9%80%89/%E6%B9%9B%E6%B1%9F%E5%8F%AF%E5%8F%A3%E5%8F%AF%E4%B9%90%E9%A5%AD%E5%A0%82%E7%BF%BB%E6%96%B0%E6%94%B9%E9%80%A0/jimeng-2026-05-29-9900-%E5%B0%86%E7%94%9F%E6%88%90%E4%B8%80%E5%BC%A0%E7%85%A7%E7%89%87%E7%BA%A7%E7%9C%9F%E5%AE%9E%E7%9A%84%E5%AE%A4%E5%86%85%E8%AE%BE%E8%AE%A1%E6%B8%B2%E6%9F%93%E5%9B%BE%EF%BC%8C%E6%9E%84%E5%9B%BE%E4%B8%8E%E7%9B%B8%E6%9C%BA%E8%A7%92%E5%BA%A6%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%8F%98%EF%BC%8C%E6%89%80%E6%9C%89%E5%AE%B6%E5%85%B7%E4%BF%9D%E6%8C%81%E5%9C%A8%E5%AE%8C%E5%85%A8....webp" loading="lazy" alt="">
+        </div>
+      </article>
+    </section>
+    <div class="hr"></div>
+    <section class="rv">
+      <div class="sec-head">
+        <div class="sec-num">TOOLS</div>
+        <h2 class="sec-title">软件能力</h2>
       </div>
-    </div>
-    <div class="proj-imgs" id="landscape-imgs"></div>
-  </section>
-</div>
-
-<div class="container"><div class="hr"></div></div>
-
-<!-- ===== 鏉垮潡浜岋細瀹跺眳璁捐 ===== -->
-<div class="container">
-  <section class="sec-head rv"><div class="sec-num">02</div><h2 class="sec-title">瀹跺眳璁捐</h2></section>
-
-  <!-- 鍘熸湪椋庡灞?-->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">浣忓畢 路 瀹ゅ唴璁捐</div></div>
-      <div>
-        <h3 class="proj-title">鍘熸湪椋庡灞呰璁?/h3>
-        <p class="proj-sub">鑷劧鑲岀悊 路 娓╂殩瑙︽劅</p>
-        <p class="proj-desc">浠ュ師鏈ㄤ负鏍稿績鏉愯川锛屽己璋冭嚜鐒惰倢鐞嗕笌娓╂殩瑙︽劅锛屾墦閫犲洖褰掓湰鐪熺殑灞呬綇绌洪棿銆?/p>
+      <div class="skills">
+        <div class="sk"><h4>建模与渲染</h4><p>3ds Max<br>Corona Renderer<br>VRay</p></div>
+        <div class="sk"><h4>后期与表现</h4><p>Photoshop<br>CAD 施工图<br>VR 技术</p></div>
+        <div class="sk"><h4>方案与协作</h4><p>主案设计<br>景观设计<br>动画渲染</p></div>
+        <div class="sk"><h4>前沿探索</h4><p>AI 辅助建模<br>智能渲染优化<br>参数化设计</p></div>
       </div>
-    </div>
-    <div class="proj-imgs" id="wood-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 瀹嬫皬缇庡瀹跺眳 -->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">浣忓畢 路 涓滄柟缇庡</div></div>
-      <div>
-        <h3 class="proj-title">瀹嬫皬缇庡瀹跺眳璁捐</h3>
-        <p class="proj-sub">鐣欑櫧 路 鍏嬪埗 路 闆呰嚧</p>
-        <p class="proj-desc">浠ュ畫浠ｇ編瀛︿负搴曡壊锛屼互鐣欑櫧涓庡厠鍒舵紨缁庨泤鑷寸敓娲伙紝杩芥眰绌洪棿鐨勭簿绁炴€т笌浠紡鎰熴€?/p>
+    </section>
+    <div class="hr"></div>
+    <section class="rv">
+      <div class="sec-head">
+        <div class="sec-num">HONORS</div>
+        <h2 class="sec-title">获奖经历</h2>
       </div>
-    </div>
-    <div class="proj-imgs" id="song-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 姘戝璁捐 -->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">姘戝 路 瀹ゅ唴璁捐</div></div>
-      <div>
-        <h3 class="proj-title">姘戝璁捐</h3>
-        <p class="proj-sub">鍦板煙鏂囧寲涓庣幇浠ｆ梾灞?/p>
-        <p class="proj-desc">鎻愬彇鍦ㄥ湴鏂囧寲绗﹀彿涓庤嚜鐒舵潗璐紝閫氳繃鍏夊奖銆佹潗鏂欎笌绌洪棿鑺傚钀ラ€犳矇娴稿紡鏃呭眳浣撻獙銆?/p>
+      <div class="awards">
+        <div class="aw"><div class="aw-y">2023</div><div class="aw-t">“楚怡杯”湖南省技能大赛</div><div class="aw-p">一等奖</div></div>
+        <div class="aw"><div class="aw-y">2022</div><div class="aw-t">一带一路暨金砖国家技能大赛</div><div class="aw-p">一等奖</div></div>
+        <div class="aw"><div class="aw-y">2022</div><div class="aw-t">“楚怡杯”湖南省技能大赛</div><div class="aw-p">一等奖 &middot; 获面试专升本资格</div></div>
+        <div class="aw"><div class="aw-y">2021</div><div class="aw-t">“CCVR”中国虚拟现实大赛</div><div class="aw-p">二等奖</div></div>
       </div>
-    </div>
-    <div class="proj-imgs" id="minsu-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 绠€绾﹀灞?-->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">浣忓畢 路 鐜颁唬绠€绾?/div></div>
+    </section>
+    <footer class="footer rv">
       <div>
-        <h3 class="proj-title">绠€绾﹀灞呰璁?/h3>
-        <p class="proj-sub">鍔熻兘 路 褰㈠紡 路 鏋佽嚧骞宠　</p>
-        <p class="proj-desc">杩芥眰鍔熻兘涓庡舰寮忕殑鏋佽嚧骞宠　锛屼互绠€娲佺嚎鏉″拰鍏嬪埗閰嶈壊婕旂粠褰撲唬閮藉競鐢熸椿缇庡銆?/p>
+        <p>石易鑫 &middot; 环境艺术设计作品集<br>PORTFOLIO 2026</p>
       </div>
-    </div>
-    <div class="proj-imgs" id="simple-imgs"></div>
-  </section>
-</div>
-
-<div class="container"><div class="hr"></div></div>
-
-<!-- ===== 鏉垮潡涓夛細椤圭洰钀藉湴 ===== -->
-<div class="container">
-  <section class="sec-head rv"><div class="sec-num">03</div><h2 class="sec-title">椤圭洰钀藉湴</h2></section>
-
-  <!-- 浜戝崡鍙彛鍙箰鍗氱墿棣?-->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">鍝佺墝绌洪棿 路 鍗氱墿棣?/div></div>
-      <div>
-        <h3 class="proj-title">浜戝崡鍙彛鍙箰鍗氱墿棣?/h3>
-        <p class="proj-sub">鍝佺墝鏂囧寲灞曠ず绌洪棿 路 40W鐙珛瀹屾垚</p>
-        <p class="proj-desc">鍙彛鍙箰鍝佺墝鏂囧寲灞曠ず绌洪棿鍏ㄦ璁捐銆備粠姒傚康鍒拌惤鍦板畬鏁存妸鎺э紝灏嗗搧鐗岀櫨骞村巻鍙蹭笌浜戝崡鍦板煙鏂囧寲铻嶅悎銆?/p>
+      <div style="text-align:right;">
+        <p>2149314571@qq.com<br>湖南 &middot; 湘西</p>
       </div>
-    </div>
-    <div class="proj-imgs" id="museum-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 鍘﹂棬鍙彛鍙箰鍔炲叕妤?-->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">鍔炲叕绌洪棿 路 瀹ゅ唴璁捐</div></div>
-      <div>
-        <h3 class="proj-title">鍘﹂棬鍙彛鍙箰鍔炲叕妤?/h3>
-        <p class="proj-sub">浼佷笟鍔炲叕绌洪棿璁捐</p>
-        <p class="proj-desc">浠ュ搧鐗屾椿鍔涗负鏍稿績锛屾墦閫犲吋鍏蜂笓涓氭€т笌鍒涙剰姘涘洿鐨勭幇浠ｄ紒涓氬姙鍏┖闂达紝婵€鍙戝洟闃熷崗浣滀笌鍒涙柊銆?/p>
-      </div>
-    </div>
-    <div class="proj-imgs" id="office-imgs"></div>
-  </section>
-
-  <div class="hr"></div>
-
-  <!-- 婀涙睙鍙彛鍙箰楗爞 -->
-  <section class="rv">
-    <div class="proj-header">
-      <div class="proj-meta"><div class="proj-cat">椁愰ギ绌洪棿 路 瀹ゅ唴璁捐</div></div>
-      <div>
-        <h3 class="proj-title">婀涙睙鍙彛鍙箰楗爞鏀归€?/h3>
-        <p class="proj-sub">浼佷笟椋熷爞缈绘柊鏀归€?/p>
-        <p class="proj-desc">浠ユ槑浜€侀珮鏁堛€佽垝閫備负璁捐瀵煎悜锛岄噸濉戜紒涓氶鍫傜殑绌洪棿浣撻獙锛屾彁鍗囧憳宸ョ敤椁愬搧璐ㄤ笌骞哥鎰熴€?/p>
-      </div>
-    </div>
-    <div class="proj-imgs" id="canteen-imgs"></div>
-  </section>
-</div>
-
-<div class="container"><div class="hr"></div></div>
-
-<div class="container">
-  <section class="sec-head rv"><div class="sec-num">TOOLS</div><h2 class="sec-title">杞欢鑳藉姏</h2></section>
-  <section class="skills rv">
-    <div class="sk"><h4>寤烘ā涓庢覆鏌?/h4><p>3ds Max<br>Corona Renderer<br>VRay</p></div>
-    <div class="sk"><h4>鍚庢湡涓庤〃鐜?/h4><p>Photoshop<br>CAD 鏂藉伐鍥?br>VR 鎶€鏈?/p></div>
-    <div class="sk"><h4>鏂规涓庡崗浣?/h4><p>涓绘璁捐<br>鏅璁捐<br>鍔ㄧ敾娓叉煋</p></div>
-    <div class="sk"><h4>鍓嶆部鎺㈢储</h4><p>AI 杈呭姪寤烘ā<br>鏅鸿兘娓叉煋浼樺寲<br>鍙傛暟鍖栬璁?/p></div>
-  </section>
-</div>
-
-<div class="container"><div class="hr"></div></div>
-
-<div class="container">
-  <section class="sec-head rv"><div class="sec-num">HONORS</div><h2 class="sec-title">鑾峰缁忓巻</h2></section>
-  <section class="awards rv">
-    <div class="aw"><div class="aw-y">2023</div><div class="aw-n">"妤氭€℃澂"婀栧崡鐪佹妧鑳藉ぇ璧?/div><div class="aw-p">涓€绛夊</div></div>
-    <div class="aw"><div class="aw-y">2022</div><div class="aw-n">涓€甯︿竴璺毃閲戠爾鍥藉鎶€鑳藉ぇ璧?/div><div class="aw-p">涓€绛夊</div></div>
-    <div class="aw"><div class="aw-y">2022</div><div class="aw-n">"妤氭€℃澂"婀栧崡鐪佹妧鑳藉ぇ璧?/div><div class="aw-p">涓€绛夊 路 鑾烽潰璇曚笓鍗囨湰璧勬牸</div></div>
-    <div class="aw"><div class="aw-y">2021</div><div class="aw-n">"CCVR"涓浗铏氭嫙鐜板疄澶ц禌</div><div class="aw-p">浜岀瓑濂?/div></div>
-  </section>
-</div>
-
-<div class="container">
-  <footer class="footer rv">
-    <div><h2>鐭虫槗閼?/h2><p style="margin-top:6px">鐜鑹烘湳璁捐 路 PORTFOLIO 2026</p></div>
-    <div><p>婀樿タ</p><p><a href="mailto:2149314571@qq.com">2149314571@qq.com</a></p><p>13467406613</p><p style="margin-top:10px;font-size:12px">3ds Max 路 Corona 路 Photoshop</p></div>
-  </footer>
+    </footer>
 </div>
 
 <script>
-// Dynamically load images from WebP directory structure
-const imgGroups = {
-  'miaoyun-imgs': {
-    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?鑻楅煹灞曢',
-    files: null // will be glob-matched via the list below
-  },
-  'shushan-imgs': {
-    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?涔﹀北骞垮満鏀归€?,
-    files: null
-  },
-  'cafe-imgs': {
-    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?鍜栧暋鍘?,
-    files: null
-  },
-  'school-imgs': {
-    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?瀛︽牎澶ч棬鏀归€?,
-    files: null
-  },
-  'park-imgs': {
-    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?鎴峰浜插瓙鍏洯',
-    files: null
-  },
-  'landscape-imgs': {
-    base: 'WebP/鍟嗕笟绌洪棿璁捐/鏁堟灉鍥剧簿閫?鏅鍏洯',
-    files: null
-  },
-  'wood-imgs': {
-    base: 'WebP/瀹跺眳璁捐/鏁堟灉鍥剧簿閫?鍘熸湪椋庡灞呰璁?,
-    files: null
-  },
-  'song-imgs': {
-    base: 'WebP/瀹跺眳璁捐/鏁堟灉鍥剧簿閫?瀹嬫皬缇庡瀹跺眳璁捐',
-    files: null
-  },
-  'minsu-imgs': {
-    base: 'WebP/瀹跺眳璁捐/鏁堟灉鍥剧簿閫?姘戝璁捐',
-    files: null
-  },
-  'simple-imgs': {
-    base: 'WebP/瀹跺眳璁捐/鏁堟灉鍥剧簿閫?绠€绾﹀灞呰璁?,
-    files: null
-  },
-  'museum-imgs': {
-    base: 'WebP/椤圭洰钀藉湴/鏁堟灉鍥剧簿閫?浜戝崡鍙彛鍙箰鍗氱墿棣?,
-    files: null
-  },
-  'office-imgs': {
-    base: 'WebP/椤圭洰钀藉湴/鏁堟灉鍥剧簿閫?鍘﹂棬鍙彛鍙箰鍏徃鍔炲叕妤艰璁?,
-    files: null
-  },
-  'canteen-imgs': {
-    base: 'WebP/椤圭洰钀藉湴/鏁堟灉鍥剧簿閫?婀涙睙鍙彛鍙箰楗爞缈绘柊鏀归€?,
-    files: null
-  }
-};
-
-// File lists for each directory (pre-computed from the actual filesystem)
-const fileLists = {
-  'miaoyun-imgs': [
-    'jimeng-2026-05-29-1111-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-1676-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-3840-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-4022-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-5885-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-7480-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9268-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9331-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9511-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
-  ],
-  'shushan-imgs': [
-    'jimeng-2026-05-29-1361-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-3090-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-4097-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-5861-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-7814-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-8460-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9662-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9979-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
-  ],
-  'cafe-imgs': [
-    'jimeng-2026-05-29-3034-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-3441-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
-  ],
-  'school-imgs': [
-    'jimeng-2026-05-29-9779-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    '鏁堟灉鍥?webp'
-  ],
-  'park-imgs': [
-    'jimeng-2026-05-29-3595-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-3645-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-3984-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-5282-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-5867-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9147-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
-  ],
-  'landscape-imgs': [
-    'jimeng-2026-05-29-2123-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-7024-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9618-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
-  ],
-  'wood-imgs': [
-    'jimeng-2026-05-29-2738-灏嗙敓66cb323c-4597-4ea1-a29d-36fe394e38c5鎴愪竴....webp',
-    'jimeng-2026-05-29-5249-灏嗙敓42c74d3b-e3bd-4984-9586-f36efb9082b3鎴愪竴....webp',
-    'jimeng-2026-05-29-6281-灏嗙敓725ad8d6-1649-41b7-a9c8-badfe716c0c8鎴愪竴....webp',
-    'jimeng-2026-05-29-7224-灏嗙敓6ebdfdd4-d413-4ff6-bc3d-45ee71246bf3鎴愪竴....webp',
-    'jimeng-2026-05-29-8084-灏嗙敓瀹㈤鍘ㄤ竴浣?鍥?)鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛?...webp'
-  ],
-  'song-imgs': [
-    '涓紡灞忛.webp',
-    '浜虹墿鍦烘櫙.webp',
-    '鍏夊奖杩愮敤.webp',
-    '瀹㈤鍘呬竴浣?webp',
-    '寰窛鐗瑰啓.webp',
-    '鐗瑰啓闀滃ご.webp'
-  ],
-  'minsu-imgs': [
-    'jimeng-2026-05-29-1703-灏哸42c9369-a9d8-4324-a096-a7b21cb189e0鐢熸垚涓€....png',
-    'jimeng-2026-05-29-3935-灏嗗厜褰辫糠浜虹敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚....png',
-    'png/jimeng-2026-06-08-2340-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛岀粰鍦伴潰娣诲姞涓庣幆澧冪浉....png',
-    'png/jimeng-2026-06-08-3666-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛岀粰鍦伴潰娣诲姞涓庣幆澧冪浉....png',
-    'png/jimeng-2026-06-08-3914-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png',
-    'png/jimeng-2026-06-08-4282-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png',
-    'png/jimeng-2026-06-08-4387-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png',
-    'png/jimeng-2026-06-08-6361-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png',
-    'png/jimeng-2026-06-08-6588-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....png'
-  ],
-  'simple-imgs': [
-    'jimeng-2026-05-29-1429-灏嗭紒鍥剧墖1鐢熸垚涓€寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚....webp',
-    'jimeng-2026-05-29-4857-灏嗗浘鐗?鐢熸垚涓€寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸?...webp',
-    'jimeng-2026-05-29-7087-灏嗗浘鐗?鐢熸垚涓€寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸?...webp'
-  ],
-  'museum-imgs': [
-    'jimeng-2026-05-29-1244-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-1877-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-4145-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-4616-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-4895-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-6896-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-8347-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9154-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9661-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
-  ],
-  'office-imgs': [
-    'jimeng-2026-05-29-1693-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-2686-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-3589-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-3875-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-4473-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-4634-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-5684-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9352-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9766-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
-  ],
-  'canteen-imgs': [
-    'jimeng-2026-05-29-6933-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-7186-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-7336-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-7471-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-7680-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-7841-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-8410-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫澶栬璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp',
-    'jimeng-2026-05-29-9758-灏嗙敓鎴愪竴寮犵収鐗囩骇鐪熷疄鐨勫鍐呰璁℃覆鏌撳浘锛屾瀯鍥句笌鐩告満瑙掑害瀹屽叏涓嶅彉锛屾墍鏈夊鍏蜂繚鎸佸湪瀹屽叏....webp'
-  ]
-};
-
-// Render images for each group
-Object.entries(fileLists).forEach(([containerId, files]) => {
-  const container = document.getElementById(containerId);
-  if (!container || !files.length) return;
-  const base = imgGroups[containerId].base;
-  files.forEach((f, i) => {
-    const src = base + '/' + encodeURI(f);
-    if (i % 3 === 0 && i + 1 < files.length) {
-      // Full then pair
-      const full = document.createElement('img');
-      full.src = src;
-      full.loading = 'lazy';
-      container.appendChild(full);
-
-      const pair = document.createElement('div');
-      pair.className = 'pair';
-      const nextFile = files[i + 1];
-      if (nextFile) {
-        const img2 = document.createElement('img');
-        img2.src = base + '/' + encodeURI(nextFile);
-        img2.loading = 'lazy';
-        pair.appendChild(img2);
-      }
-      const thirdFile = files[i + 2];
-      if (thirdFile) {
-        const img3 = document.createElement('img');
-        img3.src = base + '/' + encodeURI(thirdFile);
-        img3.loading = 'lazy';
-        pair.appendChild(img3);
-      }
-      container.appendChild(pair);
-      // Skip the paired files in the main loop
-      files[i + 1] = null;
-      files[i + 2] = null;
-    } else if (files[i] !== null && (i === 0 || (i - 1) % 3 !== 0 || files[i - 1] === null)) {
-      // Already handled in pair above, but handle edge cases
-    }
-  });
-  // Fallback: simpler approach - just render sequentially with alternating layout
-  container.innerHTML = '';
-  const cleanFiles = files.filter(f => f !== null);
-  // Actually let me redo this cleaner
-  cleanFiles.forEach((f, i) => {
-    const src = base + '/' + encodeURI(f);
-    const img = document.createElement('img');
-    img.src = src;
-    img.loading = 'lazy';
-    container.appendChild(img);
-  });
-});
-
-// Scroll reveal
 const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('sh'); obs.unobserve(e.target); } });
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('sh'); obs.unobserve(e.target); }
+  });
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 </script>
